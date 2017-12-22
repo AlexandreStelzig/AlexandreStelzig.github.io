@@ -119,6 +119,7 @@ a:hover {
     padding: 200px 0;
     text-align: center;
     color: white;
+    /*background: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../img/test.gif');*/
     background: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../img/intro-bg.jpg');
     background-position: no-repeat bottom center fixed;
     background-color: black;
@@ -149,26 +150,7 @@ a:hover {
         font-size: 22px;
     }
 }
-.btn-circle {
-    font-size: 26px;
-    width: 55px;
-    height: 55px;
-    margin-top: 15px;
-    line-height: 45px;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out;
-    color: white;
-    border: 2px solid white;
-    border-radius: 100% !important;
-    background: transparent;
-}
-.btn-circle:focus,
-.btn-circle:hover {
-    color: white;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-}
+
 .content-section {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -202,7 +184,7 @@ a:hover {
 }
 .btn-default:focus,
 .btn-default:hover {
-    color: black;
+    color: white;
     border: 1px solid #00BFFF;
     outline: none;
     background-color: #00BFFF;
@@ -259,3 +241,4 @@ body {
     vertical-align: middle;
     float: none;
 }
+
