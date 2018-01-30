@@ -82,6 +82,7 @@ a:hover {
     outline: none;
     background-color: transparent;
 }
+
 #mainNav .navbar-nav .nav-item:active,
 #mainNav .navbar-nav .nav-item:focus {
     outline: none;
@@ -109,8 +110,11 @@ a:hover {
         /*background-color: rgba(0, 191, 255, 0.3);*/
         border-bottom: 2px solid #00BFFF;
     }
-    #mainNav .nav-link.active:hover {
-        color: white;
+    #mainNav .nav-link:hover {
+        color: #00BFFF;
+    }
+    #mainNav .navbar-brand:hover {
+        color: #00BFFF;
     }
 }
 
@@ -264,12 +268,12 @@ body {
     float: none;
 }
 
-.triangle {
+/*.triangle {
     border-bottom: 100px solid black;
     border-left: 49vw solid transparent;
     border-right: 49vw solid transparent;
 }
-
+*/
 .fa {
     color: white;
    transition-duration: .3s;  
