@@ -53,6 +53,21 @@ a:hover {
     text-decoration: none;
     color:  #00BFFF;
 }
+
+#home a{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+
+#home a:focus,
+#home a:hover {
+    text-decoration: none;
+    color:  #00BFFF;
+}
+
+
 #mainNav {
     font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
