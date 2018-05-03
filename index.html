@@ -10,10 +10,10 @@
       <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <!-- Custom fonts for this template -->
       <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-      <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
       <!-- Custom styles for this template -->
       <link href="css/website.css" rel="stylesheet">
+      <!-- logo -->
+      <link rel="icon" href="img/logo.png">
    </head>
 
    <body id="page-top">
@@ -49,8 +49,6 @@
                      <h1 class="brand-heading">Hello, I'm Alexandre Stelzig</h1>
                      <br>
                      <p class="intro-text">I am a fourth year software engineer student at the University of Ottawa. I am currently doing a student exchange in Seoul, South Korea.<br><br>Follow me through my journey at <a href="https://mystudentexchangeinkorea.wordpress.com/" target="_blank"><i>mystudentexchangeinkorea.wordpress.com/</i></a></p>
-                     <p class="intro-text"></p>
-                     <p class="intro-text"></p>
                   </div>
                </div>
             </div>
@@ -81,13 +79,13 @@
             <br>
             <div class="row">
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
-                  <a href="https://placeholder.com"><img id="project-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
+                  <a href="projects/JELLO.html"><img id="project-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
                </div>
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
                   <br>
-                  <a href="https://placeholder.com"><h2>uOttawa Japanese club's Website</h2></a>
-                  <p>University of Ottawa Japanese Enthusiats Language Learning Organisation (JELLO) Club's Website.<br><a href="https://jello-aelj.github.io/" target="_blank"><i>https://jello-aelj.github.io/</i></a></p>
-                  <p><small>HTML, Javascript, Newsletter registration form</small></p>
+                  <a href="projects/JELLO.html"><h2>uOttawa Japanese club's Website / Registration Software</h2></a>
+                  <p>University of Ottawa Japanese Enthusiats Language Learning Organisation (JELLO) club's Website and Registration software.<br><a href="https://jello-aelj.github.io/" target="_blank"><i>https://jello-aelj.github.io/</i></a></p>
+                  <p><small>HTML, Javascript, Java, Newsletter registration form</small></p>
                </div>
             </div>
             <br>
@@ -101,29 +99,11 @@
                </div>
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
                   <br>
-                  <a href="https://placeholder.com"><h2>Registration Software</h2></a>
+                  <a href="https://placeholder.com"><h2>Unity 3D video game</h2></a>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                   <p><small>Java, Text file based data management</small></p>
                </div>
             </div>
-            <br>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <div class="row">
-               <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
-                  <a href="https://placeholder.com"><img id="project-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
-               </div>
-               <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
-                  <br>
-                  <a href="https://placeholder.com"><h2>Basic 2D video games</h2></a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p><small>tags</small></p>
-               </div>
-            </div>
-            </div>
-         </div>
       </section>
 
 <!--       <br>
@@ -139,7 +119,7 @@
          <div class="container">
             <div class="row">
               <div class="col-lg-6 mx-auto">
-                      <a href="https://placeholder.com"><img id="contact-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
+                  <img id="contact-img" class="img-responsive" src="img/profile_picture.jpg">
                   <div>
                     <br>
                     <div class="social-media">
@@ -149,9 +129,6 @@
                       <a href="https://github.com/AlexandreStelzig" target="_blank">
                         <span class="fa fa-github-square fa-2x fa-fw"></span>
                       </a>
-<!--                  <a href="https://www.facebook.com/alexandre.stelzig" target="_blank">
-                        <span class="fa fa-facebook-square fa-2x fa-fw"></span>
-                      </a> -->
                       <a href="https://www.linkedin.com/in/alexstelzig/" target="_blank">
                         <span class="fa fa-linkedin-square fa-2x fa-fw"></span>
                       </a>
@@ -180,16 +157,21 @@
                   </div>
                   <!-- comments input -->
                   <div class="form-group col-lg-12">
-                     <textarea autocomplete="off" rows="6" id="comments" type="text" name="Comments" class="form-control"placeholder="Message" style="border:1px solid #CCCCCC"></textarea>
+                     <textarea autocomplete="off" rows="6" id="message" type="text" name="Comments" class="form-control"placeholder="Message" style="border:1px solid #CCCCCC"></textarea>
                   </div>
                   <!-- submit - doesnt work on local, needs to be on a server -->
-                  <div class="form-group col-lg-12  text-right">
-<!--                      <button onclick="location.href='javascript:submitEmail()'" type="button">
-                     Send</button> -->
-
-                     <a href="javascript:submitEmail()" class="btn btn-default btn-lg">Send</a>
+                  <div class="row">
+                 <!--     <div class="form-group col-lg-6  text-left">
+                        <small>&nbsp;* all fields are mandatory</small>
+                        <br>
+                        <small>&nbsp;* email format is invalid</small>
+                     </div> -->
+                     <div class="form-group col-lg-12  text-right">
+                        <a href="javascript:submitEmail()" class="btn btn-default btn-lg">Send</a>&emsp;
+                     </div>
 
                   </div>
+
                </form>
             </div>
          </div>
@@ -205,9 +187,8 @@
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- Plugin JavaScript -->
       <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-      <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcl9AgHQutajo4IapZW2suwsMVAOfQnqo"></script>
       <!-- Custom scripts for this template -->
       <script src="js/javascript.js"></script>
+      <script src="js/emailManager.js"></script>
    </body>
 </html>

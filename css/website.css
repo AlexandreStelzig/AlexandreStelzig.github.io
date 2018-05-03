@@ -262,15 +262,19 @@ hr {
 }
 
 #contact-img {
-    width: 75%;
-    height: 200px;
+    max-width: 75%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
 }
 
 @media (min-width: 768px) {
-  #contact-img {
-      width: 50%;
-      height: 200px;
-  }
+    #contact-img {
+        max-width: 50%;
+        max-height: 200px;
+        width: auto;
+        height: auto;
+    }
 }
 
 body {
@@ -283,12 +287,6 @@ body {
     float: none;
 }
 
-/*.triangle {
-    border-bottom: 100px solid black;
-    border-left: 49vw solid transparent;
-    border-right: 49vw solid transparent;
-}
-*/
 .fa {
     color: white;
    transition-duration: .3s;  
