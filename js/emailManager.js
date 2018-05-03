@@ -52,6 +52,9 @@ function submitEmail(){
             document.getElementById("name").style.borderColor = "#CCCCCC";
             document.getElementById("email").style.borderColor = "#CCCCCC";
             document.getElementById("message").style.borderColor = "#CCCCCC";
+            document.getElementById("name").style.background = 'white';
+            document.getElementById("email").style.background = 'white';
+            document.getElementById("message").style.background = 'white';
             console.log('form validation success'); 
 
             //send to formspree
@@ -69,6 +72,9 @@ function submitEmail(){
                     $('#email').val("");
                     $('#message').val("");
                     alert('Thank you for your contacting me! I will respond to your email as soon as possible.')
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Something went wrong while sending the email...");
                 }
 
             });     
