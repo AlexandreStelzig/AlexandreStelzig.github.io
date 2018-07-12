@@ -89,17 +89,29 @@ $contactForm.submit(function(e) {
     //     method: 'POST',
     //     data: $(this).serialize(),
     //     dataType: 'json',
-    //     beforeSend: function() {
-    //         $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-    //     },
-    //     success: function(data) {
-    //         $contactForm.find('.alert--loading').hide();
-    //         $contactForm.append('<div class="alert alert--success">Message sent!</div>');
-    //     },
-    //     error: function(err) {
-    //         $contactForm.find('.alert--loading').hide();
-    //         $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-    //     }
+        // beforeSend: function() {
+        //     $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+        // },
+        // success: function(data) {
+        //     $contactForm.find('.alert--loading').hide();
+        //     $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+        // },
+        // error: function(err) {
+        //     $contactForm.find('.alert--loading').hide();
+        //     $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+        // }
     // });
-    $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {data: $(this).serialize(), dataType: 'json'})
+    $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {
+
+        data: $(this).serialize(), dataType: 'json',     beforeSend: function() {
+            $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+        },
+        success: function(data) {
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+        },
+        error: function(err) {
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+        }});
 });
