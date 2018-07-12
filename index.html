@@ -63,6 +63,22 @@
          <div class="container">
             <div class="row">
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
+                  <a href="projects/TheMagicalFarmer.html"><img id="project-img" class="img-responsive" src="img/magicalfarmer/combat.png"></a>
+               </div>
+               <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
+                  <br>
+                  <a href="projects/TheMagicalFarmer.html"><h2>The Magical Farmer (Unity 3D Game)</h2></a>
+                  <p>Unity 3D Video Game created for the 'Introduction to 3D Game Programming' course at Dongguk University, Seoul, South Korea. This project was designed and implemented in one month by myself and has around 1.5 to 2 hours of gameplay.</p>
+                  <p><small>Unity 3D, C#</small></p>
+               </div>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+            <div class="row">
+               <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
                   <a href="projects/YouKnowEh.html"><img id="project-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
                </div>
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
@@ -87,7 +103,7 @@
                   <p>University of Ottawa Japanese Enthusiats Language Learning Organisation (JELLO) club's Website and Registration software.<br><a href="https://jello-aelj.github.io/" target="_blank"><i>https://jello-aelj.github.io/</i></a></p>
                   <p><small>HTML, Javascript, Java, Newsletter registration form</small></p>
                </div>
-            </div>
+            </div>           
             <br>
             <br>
             <hr>
@@ -95,15 +111,16 @@
             <br>
             <div class="row">
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
-                  <a href="https://placeholder.com"><img id="project-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
+                  <a href="projects/OtherProjects.html"><img id="project-img" class="img-responsive" src="http://via.placeholder.com/300x250"></a>
                </div>
                <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
                   <br>
-                  <a href="https://placeholder.com"><h2>Unity 3D video game</h2></a>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p><small>Java, Text file based data management</small></p>
+                  <a href="projects/OtherProjects.html"><h2>Other Projects</h2></a>
+                  <p>More Android apps, projects...</p>
+                  <p><small>Various sources</small></p>
                </div>
             </div>
+
       </section>
 
 <!--       <br>
@@ -143,21 +160,22 @@
               </div>
 
 
-               <form id="form" class="col-lg-6 mx-auto">
+               <form id="contact-form" class="col-lg-6 mx-auto" action="//formspree.io/Alexandre.Stelzig@gmail.com" method="post">
                   <input type="hidden" name="_subject" value="Message From AlexandreStelzig.github.io" />
                   <input type="hidden" name="_next" value="//AlexandreStelzig.github.io/index.html" />
+                  <!-- <input class="is-hidden" type="text" name="_gotcha"> -->
                   <!-- name input -->
                   <div class="form-group col-lg-12">
-                     <input autocomplete="off" id="name" type="text" name="name"
-                        class="form-control"placeholder="Name" style="border:1px solid #CCCCCC">
+                     <input autocomplete="off" id="name" type="text" name="name" required
+                        class="form-control" placeholder="Name" style="border:1px solid #CCCCCC">
                   </div>
                   <!-- email input -->
                   <div  class="form-group col-lg-12" >
-                     <input autocomplete="off" id="email" type="email" name="_replyto"class="form-control"placeholder="Email" style="border:1px solid #CCCCCC">
+                     <input autocomplete="off" id="email" type="email" name="_replyto"class="form-control" placeholder="Email" required style="border:1px solid #CCCCCC">
                   </div>
                   <!-- comments input -->
                   <div class="form-group col-lg-12">
-                     <textarea autocomplete="off" rows="6" id="message" type="text" name="Comments" class="form-control"placeholder="Message" style="border:1px solid #CCCCCC"></textarea>
+                     <textarea autocomplete="off" rows="6" id="message" type="text" name="Comments" class="form-control" placeholder="Message" required style="border:1px solid #CCCCCC"></textarea>
                   </div>
                   <!-- submit - doesnt work on local, needs to be on a server -->
                   <div class="row">
@@ -166,9 +184,10 @@
                         <br>
                         <small>&nbsp;* email format is invalid</small>
                      </div> -->
-                     <div class="form-group col-lg-12  text-right">
-                        <a href="javascript:submitEmail()" class="btn btn-default btn-lg">Send</a>&emsp;
-                     </div>
+                  <div class="form-group col-lg-12  text-right">
+                     <!-- <a href="javascript:submitEmail()" class="btn btn-default btn-lg">Send</a>&emsp; -->
+                     <input class="btn btn-default btn-lg submit" type="submit" value="Send">
+                  </div>
 
                   </div>
 
@@ -179,7 +198,7 @@
       <!-- Footer -->
       <footer>
          <div class="container text-center">
-            <p>&copy; Alexandre Stelzig 2018 | github</p>
+            <p>&copy; Alexandre Stelzig 2018</p>
          </div>
       </footer>
       <!-- Bootstrap core JavaScript -->
