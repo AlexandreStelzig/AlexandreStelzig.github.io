@@ -105,19 +105,14 @@ $contactForm.submit(function(e) {
 
         data: $(this).serialize(), dataType: 'json',     beforeSend: function() {
             $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-        },
-        success: function(data) {
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
-        },
-        error: function(err) {
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-        }});
-
-    $.post('https://formspree.io/Alexandre.Stelzig@gmail.com',data: $(this).serialize(), dataType: 'json')
-    .done(function(msg){  })
+        }}).done(function(msg){ console.log('there'); })
     .fail(function(xhr, status, error) {
-        // error handling
-    });
+        console.log('here');
+    });;
+
+    // $.post('https://formspree.io/Alexandre.Stelzig@gmail.com',data: $(this).serialize(), dataType: 'json')
+    // .done(function(msg){  })
+    // .fail(function(xhr, status, error) {
+    //     // error handling
+    // });
 });
