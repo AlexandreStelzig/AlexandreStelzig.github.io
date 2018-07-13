@@ -101,4 +101,4 @@ $contactForm.submit(function(e) {
     // console.log('here');
     // $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {name: "test", email: "email", message: "message"})
 
-// });
+});
