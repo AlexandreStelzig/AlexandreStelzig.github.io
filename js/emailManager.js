@@ -98,6 +98,6 @@ $contactForm.submit(function(e) {
     // var name = $('#name');
     // var email = $('#email');
     // var message = $('#message');
-    $.post('https://formspree.io/email@domain.com', {name: "test", email: "email", message: "message"})
+    $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {name: "test", email: "email", message: "message"})
 
 });
