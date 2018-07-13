@@ -114,4 +114,10 @@ $contactForm.submit(function(e) {
             $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
         }});
+
+    $.post($.post('https://formspree.io/Alexandre.Stelzig@gmail.com',data: $(this).serialize(), dataType: 'json')
+    .done(function(msg){  })
+    .fail(function(xhr, status, error) {
+        // error handling
+    });
 });
