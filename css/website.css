@@ -314,13 +314,7 @@ body {
 }
 /* ####### MODAL ####### */
 
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-#myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -399,3 +393,20 @@ body {
         width: 100%;
     }
 }
+
+.project-img {
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    padding: 1px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    object-fit: cover;
+}
+
+.project-img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-img:hover {opacity: 0.7;}

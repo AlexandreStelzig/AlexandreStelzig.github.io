@@ -95,9 +95,9 @@ $contactForm.submit(function(e) {
     //         $contactForm.find('.alert--loading').hide();
     //         $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
     // });;
-    var name = $('#name');
-    var email = $('#email');
-    var message = $('#message');
-    $.post('https://formspree.io/email@domain.com', {name: name, email: email, message: message})
+    // var name = $('#name');
+    // var email = $('#email');
+    // var message = $('#message');
+    $.post('https://formspree.io/email@domain.com', {name: "test", email: "email", message: "message"})
 
 });
