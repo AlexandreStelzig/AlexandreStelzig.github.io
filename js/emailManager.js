@@ -84,35 +84,16 @@ function validateEmail(email) {
 var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
     e.preventDefault();
-    // $.ajax({
-    //     url: '//formspree.io/Alexandre.Stelzig@gmail.com',
-    //     method: 'POST',
-    //     data: $(this).serialize(),
-    //     dataType: 'json',
-        // beforeSend: function() {
-        //     $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-        // },
-        // success: function(data) {
-        //     $contactForm.find('.alert--loading').hide();
-        //     $contactForm.append('<div class="alert alert--success">Message sent!</div>');
-        // },
-        // error: function(err) {
-        //     $contactForm.find('.alert--loading').hide();
-        //     $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-        // }
-    // });
     $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {
 
         data: $(this).serialize(), dataType: 'json',     beforeSend: function() {
             $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-        }}).done(function(msg){ console.log('there'); })
-    .fail(function(xhr, status, error) {
-        console.log('here');
+        }}).done(function(msg){ 
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+        }).fail(function(xhr, status, error) {
+            $contactForm.find('.alert--loading').hide();
+            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
     });;
 
-    // $.post('https://formspree.io/Alexandre.Stelzig@gmail.com',data: $(this).serialize(), dataType: 'json')
-    // .done(function(msg){  })
-    // .fail(function(xhr, status, error) {
-    //     // error handling
-    // });
 });
