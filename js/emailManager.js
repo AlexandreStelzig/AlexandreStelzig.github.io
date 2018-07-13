@@ -84,16 +84,20 @@ function validateEmail(email) {
 var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
     e.preventDefault();
-    $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {
+    // $.post('https://formspree.io/Alexandre.Stelzig@gmail.com', {
 
-        data: $(this).serialize(), dataType: 'json',     beforeSend: function() {
-            $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-        }}).done(function(msg){ 
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--success">Message sent!</div>');
-        }).fail(function(xhr, status, error) {
-            $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-    });;
+    //     data: $(this).serialize(), dataType: 'json',     beforeSend: function() {
+    //         $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+    //     }}).done(function(msg){ 
+    //         $contactForm.find('.alert--loading').hide();
+    //         $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+    //     }).fail(function(xhr, status, error) {
+    //         $contactForm.find('.alert--loading').hide();
+    //         $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+    // });;
+    var name = $('#name');
+    var email = $('#email');
+    var message = $('#message');
+    $.post('https://formspree.io/email@domain.com', {name: name, email: email, message: message})
 
 });
