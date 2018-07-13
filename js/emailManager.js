@@ -94,7 +94,7 @@ $contactForm.submit(function(e) {
         }).fail(function(xhr, status, error) {
             $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-    });;
+    });
     // var name = $('#name');
     // var email = $('#email');
     // var message = $('#message');
