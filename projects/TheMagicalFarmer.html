@@ -49,42 +49,42 @@
 
                  <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('combat1')">
-                     <img class="project-img"  id="combat1" src="../img/magicalfarmer/combat1.png" alt="Combat" style="width:100%;max-width:300px">
+                     <img class="project-img interactable"  id="combat1" src="../img/magicalfarmer/combat1.png" alt="Combat" nextId='combat2' previousId='settings' style="width:100%;max-width:300px">
                    </a>
                  </div>
                  <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('combat2')">
-                     <img class="project-img"  id="combat2" src="../img/magicalfarmer/combat2.png" alt="Skill" style="width:100%;max-width:300px">
+                     <img class="project-img interactable"  id="combat2" src="../img/magicalfarmer/combat2.png" alt="Skill" nextId='crops' previousId='combat1' style="width:100%;max-width:300px">
                    </a>
                  </div>
                  <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('crops')">
-                     <img  class="project-img" id="crops" src="../img/magicalfarmer/crops.png" alt="Crops" style="width:100%;max-width:300px">
+                     <img  class="project-img interactable" id="crops" src="../img/magicalfarmer/crops.png" alt="Crops" nextId='gameMap' previousId='settings' style="width:100%;max-width:300px">
                    </a>
                  </div>
                   <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('gameMap')">
-                     <img class="project-img"  id="gameMap" src="../img/magicalfarmer/map.png" alt="Skill" style="width:100%;max-width:300px">
+                     <img class="project-img interactable"  id="gameMap" src="../img/magicalfarmer/map.png" alt="Skill" nextId='village1' previousId='crops' style="width:100%;max-width:300px">
                    </a>
                  </div>
                   <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('village1')">
-                     <img class="project-img"  id="village1" src="../img/magicalfarmer/village1.png" alt="Building window" style="width:100%;max-width:300px">
+                     <img class="project-img interactable"  id="village1" src="../img/magicalfarmer/village1.png" alt="Building window" nextId='village2' previousId='gameMap' style="width:100%;max-width:300px">
                    </a>
                  </div>
                  <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('village2')">
-                     <img class="project-img"  id="village2" src="../img/magicalfarmer/village2.png" alt="Blacksmith" style="width:100%;max-width:300px">
+                     <img class="project-img interactable"  id="village2" src="../img/magicalfarmer/village2.png" alt="Blacksmith" nextId='stats' previousId='village1' style="width:100%;max-width:300px">
                    </a>
                  </div>
                  <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('stats')">
-                     <img  class="project-img" id="stats" src="../img/magicalfarmer/stats.png" alt="Player's Stats" style="width:100%;max-width:300px">
+                     <img  class="project-img interactable" id="stats" src="../img/magicalfarmer/stats.png" alt="Player's Stats" nextId='settings' previousId='village2' style="width:100%;max-width:300px">
                    </a>
                  </div>
                  <div class="col-lg-3 col-md-4 col-xs-6">
                    <a href="javascript:openModal('settings')">
-                     <img class="project-img" id="settings" src="../img/magicalfarmer/settings.png" alt="Settings" style="width:100%;max-width:300px">
+                     <img class="project-img interactable" id="settings" src="../img/magicalfarmer/settings.png" alt="Settings" nextId='combat1' previousId='stats' style="width:100%;max-width:300px">
                    </a>
                  </div>
                </div>
@@ -109,17 +109,28 @@
                <p><a href="https://www.youtube.com/watch?v=exC9Ocg30wY" target="_blank"><u>Here</u></a> is a short video showing the 'Infinity Waves' Level.</p>
             </div>
             <div class="row">
-               <p>If you are interested in playing this game, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com" ><i><u>contact me</u></i></a></p>
+               <p>If you are interested in playing this game, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com" ><u>contact me</u></a></p>
             </div>
          </div>
       </section>
 
       <!-- The Modal -->
-      <div id="myModal" class="modal">
+      <div id="myModal" class="modal" >
         <span class="close">&times;</span>
-        <img class="modal-content" id="modelImage">
+
+            <!-- <div class="row"> -->
+              <img class="modal-content" id="modelImage">
+
+
+            <!-- </div> -->
+            <div class="row">
+                  <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
+                  <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
+            </div>
         <div id="caption"></div>
       </div>
+
+
 
       <!-- Footer -->
       <footer>

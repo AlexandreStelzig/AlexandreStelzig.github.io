@@ -16,7 +16,7 @@
       <link rel="icon" href="../img/logo.png">
    </head>
 
-   <body id="page-top">
+   <body id="page-top" class="project-background">
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
          <div class="container">
@@ -32,80 +32,139 @@
 
       <!-- Project Info Section -->
       <section id="projects" class="content-section">
-         <div class="container">
-            <div class="row">
-               <h1>Randomizer App</h1>
+         <div class="container  project-background-description">
+            <div class="row ">
+               <h1><i>Randomizer App</i></h1>
             </div>
             <div class="row">
                <h2>Description</h2>
             </div>
             <div class="row">
-               <p></p>
+               <p>Having a hard time chosing between 2 or more things? Well, I did until I created the "Randomizer" application on Android. This application allows the user to create lists with items that can be randomized in a random order. Each item also has an associated weight which changes the odds of it being picked.</p>
             </div>
-
+            
             <div class="row">
                <h2>Media</h2>
-            </div>
+               <div class="row text-center text-lg-left">
 
+                 <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('randomizeList')">
+                     <img class="project-img interactable"  id="randomizeList" src="../img/other/randomizer/randomizeList.png"" alt="Randomizer List" nextId='randomizeItems' previousId='randomizeResults' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+                 <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('randomizeItems')">
+                     <img class="project-img interactable"  id="randomizeItems" src="../img/other/randomizer/randomizeItems.png"" alt="Randomizer Items" nextId='randomizeAddItem' previousId='randomizeList' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+                 <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('randomizeAddItem')">
+                     <img  class="project-img interactable" id="randomizeAddItem" src="../img/other/randomizer/randomizeAddItem.png"" alt="Randomizer Add Item" nextId='randomizeResults' previousId='randomizeItems' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+                  <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('randomizeResults')">
+                     <img class="project-img interactable"  id="randomizeResults" src="../img/other/randomizer/randomizeResults.png" alt="Randomizer Results" nextId='randomizeList' previousId='randomizeAddItem' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+               </div>
+            </div>
+            <br/>
             <div class="row">
                <h2>Main Features</h2>
             </div>
             <div class="row">
                <ul>
-<!--                  <li>Create and organize flash cards into decks</li>
-                 <li>Review deck's cards</li>
-                 <li>Manage cards review time</li>
-                 <li>Import/Export cards (cvs format)</li>
-                 <li>Test your knowledge with Reading, Writing and Multiple Choice quizes</li>
-                 <li>View your profile's statistics (number of cards added and total cards over a period of time)</li>
-                 <li>Create and personalize multiple profiles (including the background picture)</li>
-               </ul> -->
+                 <li>Create Lists from the application's drawer</li>
+                 <li>Add items (name and random weight)</li>
+                 <li>Set an item active or inactive</li>
+                 <li>Sort the item's position in the list with a dragview listview</li>
+                 <li>Long click the item to edit or delete it</li>
+                 <li>Edit the list's name or delete it by clicking the menu options</li>
+                 <li>Randomize the list and display the results in a custom listview dialog (with the option to re-randomize it)</li>
+               </ul>
             </div>
-<!--             <div class="row">
-               <p>If you wish to have the apk for this application, please feel free to contact me</p>
-            </div> -->
+            <div class="row">
+               <p>You can view the source code <a href="https://github.com/AlexandreStelzig/Randomizer" target="_blank" ><u>here</u></a></p>
+            </div>
+            <div class="row">
+               <p>If you are interested in an apk for this application, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com" ><u>contact me</u></a></p>
+            </div>
          </div>
       </section>
 
-      
-            <hr>
-
-            <!-- Project Info Section -->
-      <section id="projects" class="content-section">
-         <div class="container">
-            <div class="row">
-               <h1>Learning Goals</h1>
+      <!-- Project Info Section -->
+      <!-- <section id="projects" class="content-section">
+         <div class="container  project-background-description">
+            <div class="row ">
+               <h1><i>The Magical Farmer</i></h1>
             </div>
             <div class="row">
                <h2>Description</h2>
             </div>
             <div class="row">
-               <p></p>
+               <p>This is an Unity 3D Video Game available on Mac and Windows that was created in one month during a introduction to 3D video game programming class in South Korea.<br/>Game summary:<br/>Once upon a time, there was a small village living in peace. But one day, monsters invaded the land, stealing and destroying everything. Having no choice, the villagers abandoned the land. But there was one person that still had hope: The magical farmer. The player plays as the magical farmer. His main goal is to venture into the dungeon and fight waves of enemies. By defeating the waves, he can collect seeds. Using those seeds, he can grow crops and build new buildings in the city. Each building has their own specialty which will help the player become more powerful and defeat stronger enemies.</p>
             </div>
-
+            
             <div class="row">
                <h2>Media</h2>
-            </div>
+               <div class="row text-center text-lg-left">
 
+                 <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('combat1')">
+                     <img class="project-img interactable"  id="combat1" src="../img/magicalfarmer/combat1.png" alt="Combat" nextId='combat2' previousId='settings' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+                 <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('combat2')">
+                     <img class="project-img interactable"  id="combat2" src="../img/magicalfarmer/combat2.png" alt="Skill" nextId='crops' previousId='combat1' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+                 <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('crops')">
+                     <img  class="project-img interactable" id="crops" src="../img/magicalfarmer/crops.png" alt="Crops" nextId='gameMap' previousId='settings' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+                  <div class="col-lg-3 col-md-4 col-xs-6">
+                   <a href="javascript:openModal('gameMap')">
+                     <img class="project-img interactable"  id="gameMap" src="../img/magicalfarmer/map.png" alt="Skill" nextId='village1' previousId='crops' style="width:100%;max-width:300px">
+                   </a>
+                 </div>
+               </div>
+            </div>
+            <br/>
             <div class="row">
                <h2>Main Features</h2>
             </div>
             <div class="row">
                <ul>
-<!--                  <li>Create and organize flash cards into decks</li>
-                 <li>Review deck's cards</li>
-                 <li>Manage cards review time</li>
-                 <li>Import/Export cards (cvs format)</li>
-                 <li>Test your knowledge with Reading, Writing and Multiple Choice quizes</li>
-                 <li>View your profile's statistics (number of cards added and total cards over a period of time)</li>
-                 <li>Create and personalize multiple profiles (including the background picture)</li>
-               </ul> -->
+                 <li>Fight 6 types of enemies using 4 different skills</li>
+                 <li>Collect seeds by defeating waves of enemies</li>
+               </ul>
             </div>
-<!--             <div class="row">
-               <p>If you wish to have the apk for this application, please feel free to contact me</p>
-            </div> -->
+            <div class="row">
+               <p>If you are interested in playing this game, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com" ><u>contact me</u></a></p>
+            </div>
          </div>
-      </section>
+      </section> -->
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal" >
+        <span class="close">&times;</span>
+
+            <!-- <div class="row"> -->
+              <img class="modal-content" id="modelImage">
+
+
+            <!-- </div> -->
+            <div class="row">
+                  <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
+                  <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
+            </div>
+        <div id="caption"></div>
+      </div>
+
+
 
       <!-- Footer -->
       <footer>
@@ -120,5 +179,8 @@
       <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
       <!-- Custom scripts for this template -->
       <script src="../js/javascript.js"></script>
+      <script src="../js/modal.js"></script>
+
+
    </body>
 </html>
