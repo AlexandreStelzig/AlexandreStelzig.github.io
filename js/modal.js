@@ -2,7 +2,7 @@ var nextId;
 var previousId;
 
 
-function openModal(id){
+function openModal(id) {
 	// Get the modal
 	var modal = document.getElementById("myModal");
 
@@ -13,28 +13,28 @@ function openModal(id){
 	var captionText = document.getElementById("caption");
 
 
-	if(img === null)
+	if (img === null)
 		return;
 
 
 	modal.style.display = "none";
 
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    captionText.innerHTML = "";
+	modal.style.display = "block";
+	modalImg.src = img.src;
+	captionText.innerHTML = "";
 
-    nextId = img.getAttribute('nextId');
-    previousId = img.getAttribute('previousId');
+	nextId = img.getAttribute('nextId');
+	previousId = img.getAttribute('previousId');
 
 	if (typeof nextId === 'undefined' || !nextId) {
 		document.getElementById("nextButton").style.display = "none";
-	}else{
+	} else {
 		document.getElementById("nextButton").style.display = "block";
 	}
 
 	if (typeof previousId === 'undefined' || !previousId) {
 		document.getElementById("previousButton").style.display = "none";
-	}else{
+	} else {
 		document.getElementById("previousButton").style.display = "block";
 	}
 
@@ -42,15 +42,15 @@ function openModal(id){
 	var span = document.getElementsByClassName("close")[0];
 
 	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() { 
-	    modal.style.display = "none";
+	span.onclick = function () {
+		modal.style.display = "none";
 	}
 }
 
-function nextClicked(){
+function nextClicked() {
 	openModal(nextId);
 }
 
-function previousClicked(){
+function previousClicked() {
 	openModal(previousId);
 }

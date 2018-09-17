@@ -1,162 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Alexandre Stelzig - Software Engineering Student</title>
-      <!-- Bootstrap core CSS -->
-      <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Custom fonts for this template -->
-      <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <!-- Custom styles for this template -->
-      <link href="../css/website.css" rel="stylesheet">
-      <!-- logo -->
-      <link rel="icon" href="../img/logo.png">
-   </head>
 
-   <body id="page-top" class="project-background">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="../index.html"> &larr; HOME</a>
-               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                     <a class="navbar-brand js-scroll-trigger" href="../index.html">Alex Stelzig</a>
-                  </li>
-               </ul>
-         </div>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Alexandre Stelzig - Software Engineering Student</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template -->
+  <link href="../css/website.css" rel="stylesheet">
+  <!-- logo -->
+  <link rel="icon" href="../img/logo.png">
+</head>
 
-
-      <!-- Project Info Section -->
-      <section id="projects" class="content-section">
-         <div class="container  project-background-description">
-            <div class="row ">
-               <h1><i>uOttawa Japanese Club</i></h1>
-            </div>
-            <div class="row">
-               <h2>Description</h2>
-            </div>
-            <div class="row">
-               <p>Since I was a freshman, I have been involved in the University of Ottawa Japanese club where we do weekly cultural/learning activities related with Japan and their language. I was also an excutif for one year which motivated me to contribute to the club's future and success. To give more information to the club members as well as to the newcomers, I decided to design and create a website for the club which showcased the basic information of the club. I also added a form which sends a message automatically to the club's email which is mainly used to sign-up for the newsletter.</p>
-               <p>Another issue that the club encountered during the years was during the club fair where most of the recruiting happens. During that period, the club used to write down the name and email address of the people that were interested in the club on a piece of paper. The issue with this is that once the day is over, someone needs to enter all the emails one by one into the club's email list which can take a long time and errors can happen. To overcome this issue and save a lot of time, I created a registration software which can export the emails into a easily copied format.</p>
-            </div>
-            
-            <div class="row">
-               <h2>Media</h2>
-            </div>
-            <div class="row">
-               <div class="row text-center text-lg-left">
-
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('websiteIntro')">
-                     <img class="project-img interactable"  id="websiteIntro" src="../img/jello/websiteIntro.png" alt="Website intro" nextId='websiteAbout' previousId='registrationExportResult' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('websiteAbout')">
-                     <img class="project-img interactable"  id="websiteAbout" src="../img/jello/websiteAbout.png" alt="Website About" nextId='websiteNews' previousId='websiteIntro' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('websiteNews')">
-                     <img  class="project-img interactable" id="websiteNews" src="../img/jello/websiteNews.png" alt="Website News" nextId='websiteForm' previousId='websiteAbout' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('websiteForm')">
-                     <img class="project-img interactable"  id="websiteForm" src="../img/jello/websiteForm.png" alt="Website Form" nextId='registrationMain' previousId='websiteNews' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('registrationMain')">
-                     <img class="project-img interactable"  id="registrationMain" src="../img/jello/registrationMain.png" alt="Registration main screen" nextId='registrationList' previousId='websiteForm' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('registrationList')">
-                     <img class="project-img interactable"  id="registrationList" src="../img/jello/registrationList.png" alt="Registration List" nextId='registrationExport' previousId='registrationMain' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('registrationExport')">
-                     <img  class="project-img interactable" id="registrationExport" src="../img/jello/registrationExport.png" alt="Registration export" nextId='registrationExportResult' previousId='registrationList' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('registrationExportResult')">
-                     <img class="project-img interactable" id="registrationExportResult" src="../img/jello/registrationExportResult.png" alt="Registration export Results" nextId='websiteIntro' previousId='registrationExport' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-               </div>
-            </div>
-            <br/>
-            <div class="row">
-               <h2>Main Features</h2>
-            </div>
-             <div class="row">
-              <h3 class="list-heading">JELLO's website</h3>
-            </div>
-            <div class="row">
-                <ul>
-                  <li>About: Club's description and current executives names and pictures</li>
-                  <li>News: General information and a Facebook iframe with the latest news</li>
-                  <li>Register: Send an automatic email to the club asking to be added to the newsletter list</li>
-                  <li>Toggle languages from English and French</li>
-                  <li>Responsive UI with bootstrap</li>
-                </ul>
-            </div>
-            <div class="row">
-               <p>You can visit the website at <a href="https://jello-aelj.github.io/" target="_blank" ><u>jello-aelj.github.io/</u></a></p>
-            </div>
-            <div class="row">
-              <h3 class="list-heading">Registration software</h3>
-            </div>
-            <div class="row">
-                  <ul>
-                    <li>Register a new member (name, email, language level, comments)</li>
-                    <li>View all registered members information</li>
-                    <li>Export names, emails, language levels and/or comments</li>
-                  </ul>
-             </div>
-         </div>
-      </section>
-
-      <!-- The Modal -->
-      <div id="myModal" class="modal" >
-        <span class="close">&times;</span>
-
-            <!-- <div class="row"> -->
-              <img class="modal-content" id="modelImage">
+<body id="page-top" class="project-background">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="../index.html"> &larr; HOME</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="navbar-brand js-scroll-trigger" href="../index.html">Alex Stelzig</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
-            <!-- </div> -->
-            <div class="row">
-                  <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
-                  <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
-            </div>
-        <div id="caption"></div>
+  <!-- Project Info Section -->
+  <section id="projects" class="content-section">
+    <div class="container  project-background-description">
+      <div class="row ">
+        <h1><i>uOttawa Japanese Club</i></h1>
+      </div>
+      <div class="row">
+        <h2>Description</h2>
+      </div>
+      <div class="row">
+        <p>Since I was a freshman, I have been involved in the University of Ottawa Japanese club where we do weekly
+          cultural/learning activities related with Japan and their language. I was also an excutif for one year which
+          motivated me to contribute to the club's future and success. To give more information to the club members as
+          well as to the newcomers, I decided to design and create a website for the club which showcased the basic
+          information of the club. I also added a form which sends a message automatically to the club's email which is
+          mainly used to sign-up for the newsletter.</p>
+        <p>Another issue that the club encountered during the years was during the club fair where most of the
+          recruiting happens. During that period, the club used to write down the name and email address of the people
+          that were interested in the club on a piece of paper. The issue with this is that once the day is over,
+          someone needs to enter all the emails one by one into the club's email list which can take a long time and
+          errors can happen. To overcome this issue and save a lot of time, I created a registration software which can
+          export the emails into a easily copied format.</p>
       </div>
 
+      <div class="row">
+        <h2>Media</h2>
+      </div>
+      <div class="row">
+        <div class="row text-center text-lg-left">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('websiteIntro')">
+              <img class="project-img interactable" id="websiteIntro" src="../img/jello/websiteIntro.png" alt="Website intro"
+                nextId='websiteAbout' previousId='registrationExportResult' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('websiteAbout')">
+              <img class="project-img interactable" id="websiteAbout" src="../img/jello/websiteAbout.png" alt="Website About"
+                nextId='websiteNews' previousId='websiteIntro' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('websiteNews')">
+              <img class="project-img interactable" id="websiteNews" src="../img/jello/websiteNews.png" alt="Website News"
+                nextId='websiteForm' previousId='websiteAbout' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('websiteForm')">
+              <img class="project-img interactable" id="websiteForm" src="../img/jello/websiteForm.png" alt="Website Form"
+                nextId='registrationMain' previousId='websiteNews' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('registrationMain')">
+              <img class="project-img interactable" id="registrationMain" src="../img/jello/registrationMain.png" alt="Registration main screen"
+                nextId='registrationList' previousId='websiteForm' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('registrationList')">
+              <img class="project-img interactable" id="registrationList" src="../img/jello/registrationList.png" alt="Registration List"
+                nextId='registrationExport' previousId='registrationMain' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('registrationExport')">
+              <img class="project-img interactable" id="registrationExport" src="../img/jello/registrationExport.png"
+                alt="Registration export" nextId='registrationExportResult' previousId='registrationList' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('registrationExportResult')">
+              <img class="project-img interactable" id="registrationExportResult" src="../img/jello/registrationExportResult.png"
+                alt="Registration export Results" nextId='websiteIntro' previousId='registrationExport' style="width:100%;max-width:300px">
+            </a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <h2>Main Features</h2>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">JELLO's website</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>About: Club's description and current executives names and pictures</li>
+          <li>News: General information and a Facebook iframe with the latest news</li>
+          <li>Register: Send an automatic email to the club asking to be added to the newsletter list</li>
+          <li>Toggle languages from English and French</li>
+          <li>Responsive UI with bootstrap</li>
+        </ul>
+      </div>
+      <div class="row">
+        <p>You can visit the website at <a href="https://jello-aelj.github.io/" target="_blank"><u>jello-aelj.github.io/</u></a></p>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Registration software</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Register a new member (name, email, language level, comments)</li>
+          <li>View all registered members information</li>
+          <li>Export names, emails, language levels and/or comments</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+
+    <!-- <div class="row"> -->
+    <img class="modal-content" id="modelImage">
 
 
-      <!-- Footer -->
-      <footer>
-         <div class="container text-center">
-            <p>&copy; Alexandre Stelzig 2018</p>
-         </div>
-      </footer>
-      <!-- Bootstrap core JavaScript -->
-      <script src="../vendor/jquery/jquery.min.js"></script>
-      <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- Plugin JavaScript -->
-      <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-      <!-- Custom scripts for this template -->
-      <script src="../js/javascript.js"></script>
-      <script src="../js/modal.js"></script>
+    <!-- </div> -->
+    <div class="row">
+      <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
+      <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
+    </div>
+    <div id="caption"></div>
+  </div>
 
 
-   </body>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; Alexandre Stelzig 2018</p>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="../js/javascript.js"></script>
+  <script src="../js/modal.js"></script>
+
+
+</body>
+
 </html>

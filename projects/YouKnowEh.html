@@ -1,272 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Alexandre Stelzig - Software Engineering Student</title>
-      <!-- Bootstrap core CSS -->
-      <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Custom fonts for this template -->
-      <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <!-- Custom styles for this template -->
-      <link href="../css/website.css" rel="stylesheet">
-      <!-- logo -->
-      <link rel="icon" href="../img/logo.png">
-   </head>
 
-   <body id="page-top" class="project-background">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="../index.html"> &larr; HOME</a>
-               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                     <a class="navbar-brand js-scroll-trigger" href="../index.html">Alex Stelzig</a>
-                  </li>
-               </ul>
-         </div>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Alexandre Stelzig - Software Engineering Student</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template -->
+  <link href="../css/website.css" rel="stylesheet">
+  <!-- logo -->
+  <link rel="icon" href="../img/logo.png">
+</head>
 
-
-      <!-- Project Info Section -->
-      <section id="projects" class="content-section">
-         <div class="container  project-background-description">
-            <div class="row ">
-               <h1><i>You Know Eh?</i></h1>
-            </div>
-            <div class="row">
-               <h2>Description</h2>
-            </div>
-            <div class="row">
-               <p>"You Know Eh?" is a flash card application that serves the purposes of learning new languages faster by engaging the user with repetitive memorization. I created this application when I started learning Korean and wanted to have a better way to learn vocabulary. When I tried existing flash cards applications, there was always a few features that I wanted that was missing, so I told myself "why not build one instead?" Since then, this application helped me greatly while learning new languages.</p>
-            </div>
-            
-            <div class="row">
-               <h2>Media</h2>
-            </div>
-            <div class="row">
-               <div class="row text-center text-lg-left">
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('menu')">
-                     <img class="project-img interactable"  id="menu" src="../img/youknoweh/Menu.png" alt="Menu" nextId='review' previousId='profileList' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('review')">
-                     <img class="project-img interactable"  id="review" src="../img/youknoweh/Review.png" alt="Review" nextId='cards' previousId='menu' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('cards')">
-                     <img class="project-img interactable"  id="cards" src="../img/youknoweh/Cards.png" alt="Card List" nextId='cardInfo' previousId='review' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('cardInfo')">
-                     <img class="project-img interactable"  id="cardInfo" src="../img/youknoweh/CardInfo.png" alt="Card Info" nextId='deckList' previousId='cards' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('deckList')">
-                     <img class="project-img interactable"  id="deckList" src="../img/youknoweh/DeckList.png" alt="Deck List" nextId='importing' previousId='cardInfo' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('importing')">
-                     <img class="project-img interactable"  id="importing" src="../img/youknoweh/Importing.png" alt="Example of importing" nextId='quiz' previousId='deckList' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('quiz')">
-                     <img class="project-img interactable"  id="quiz" src="../img/youknoweh/Quiz.png" alt="Quiz" nextId='statistics' previousId='importing' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('statistics')">
-                     <img class="project-img interactable"  id="statistics" src="../img/youknoweh/Statistics.png" alt="Statistics" nextId='profile' previousId='quiz' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('profile')">
-                     <img class="project-img interactable"  id="profile" src="../img/youknoweh/Profile.png" alt="Profile" nextId='profileEdit' previousId='statistics' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('profileEdit')">
-                     <img class="project-img interactable"  id="profileEdit" src="../img/youknoweh/ProfileEdit.png" alt="Profile Edit" nextId='about' previousId='profile' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('about')">
-                     <img class="project-img interactable"  id="about" src="../img/youknoweh/About.png" alt="About" nextId='profileList' previousId='profileEdit' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-xs-6">
-                   <a href="javascript:openModal('profileList')">
-                     <img class="project-img interactable"  id="profileList" src="../img/youknoweh/ProfileList.png" alt="Profile list" nextId='menu' previousId='about' style="width:100%;max-width:300px">
-                   </a>
-                 </div>
-               </div>
-            </div>
-            <br/>
-            <div class="row">
-               <h2>Main Features</h2>
-            </div>
-            <div class="row">
-              <h3 class="list-heading">Review</h3>
-            </div>
-
-            <div class="row">
-               <ul>
-                 <li>Review cards by selecting a deck in a random or chronological order</li>
-                 <li>Review by 'Language Learning' -> 'Native Language' or vice-versa</li>
-                 <li>Toggle a card from review for X hours (also includes an show preview and undo functions if misclicked)</li>
-                 <li>Settings for review includes: Modify current card's decks, view card detailed information, shuffle order, always show answers</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Card List</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Display all cards or cards for a selected deck</li>
-                 <li>Search card(s) by native or learning name</li>
-                 <li>Clicking on a card opens the card's information</li>
-                 <li>Long clicking or clicking on more gives the option to: edit card, open quick info, open quick edit, delete card</li>
-                 <li>Sort cards by: Language Learning (A-Z) or (Z-A), Native Language (A-Z) or (Z-A), Date Created (New-Old) or (Old-New), Date Modified (New-Old) or (Old-New), Number of decks</li>
-                 <li>Add or Remove cards for current selected deck</li>
-                 <li>Toggle cards from review for current selected deck</li>
-                 <li>Import cards from a csv file</li>
-                 <li>Reverse the display information text location</li>
-                 <li>Filter the review and non-review cards</li>
-                 <li>Quick create (no comments)</li>
-                 <li>Open card creation card (if open with a deck selected, the deck will be automaticly added to the card's deck list)</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Card Information</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Language Learning question</li>
-                 <li>Meaning in Native Language</li>
-                 <li>Comments</li>
-                 <li>Card's Decks information (can be in 0, 1 or multiple decks)</li>
-                 <li>Date Created and Modified information</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Deck List</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Display all decks in the order the user placed them</li>
-                 <li>Clicking on a deck opens the card list on the selected deck</li>
-                 <li>Long clicking or clicking on more gives the option to: edit deck, quick information, export deck (csv file), delete deck</li>
-                 <li>Reorder decks positions</li>
-                 <li>Import one (csv) or multiple (zip) deck(s)</li>
-                 <li>Export all decks (zip file)</li>
-                 <li>Create new deck</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Quiz</h3>
-            </div>
-            <div class="row">
-               <ul>
-
-                 <li>3 types of quizes: Reading, Writing and Multiple Choice</li>
-                 <li>Reading: Similar to review but with failed/pass button instead of show next</li>
-                 <li>Writing: Spell correctly the given word into the targeted language</li>
-                 <li>Multiple Choice: Chose the right translation between 4 multiple choice options</li>
-                 <li>New Quiz option: quiz type, include non-review cards, orientation of question asked, which deck(s) to use</li>
-                 <li>Take a break and come back to the quiz anytime with the save and continue function</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Quiz History</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Display the past quizzes information and results (# pass/failed) and time taken to complete it</li>
-                 <li>Export/Import (csv) quizzes history</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Statistics</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Display the statistics of: Number of cards added or Total number of cards for a date range</li>
-                 <li>Select one, multiple or all decks statistics</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Profile</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Multiple profiles with unique cards and decks</li>
-                 <li>Each profile has: a name, labels for the front and back of the card, settings, 8 types of background color, background image...</li>
-                 <li>Settings include: Default sorting, Quick toggle time (hours), Merge Duplicate cards, View deleted cards, Export profile(s) and more...</li>
-               </ul>
-             </div>
-             <div class="row">
-              <h3 class="list-heading">Profile List</h3>
-            </div>
-            <div class="row">
-               <ul>
-                 <li>Scroll list with dynamic background changing depending of the selected profile</li>
-                 <li>Display last time that the profile was opened</li>
-                 <li>Create new profile</li>
-               </ul>
-             </div>
-            <div class="row">
-               <p>You can view the source code <a href="https://github.com/AlexandreStelzig/YouKnowEhV2" target="_blank" ><u>here</u></a></p>
-            </div>
-            <div class="row">
-               <p>If you are interested in an apk for this application, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com" ><u>contact me</u></a></p>
-            </div>
-         </div>
-      </section>
-
-      <!-- The Modal -->
-      <div id="myModal" class="modal" >
-        <span class="close">&times;</span>
-
-            <!-- <div class="row"> -->
-              <img class="modal-content" id="modelImage">
+<body id="page-top" class="project-background">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="../index.html"> &larr; HOME</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="navbar-brand js-scroll-trigger" href="../index.html">Alex Stelzig</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
-            <!-- </div> -->
-            <div class="row">
-                  <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
-                  <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
-            </div>
-        <div id="caption"></div>
+  <!-- Project Info Section -->
+  <section id="projects" class="content-section">
+    <div class="container  project-background-description">
+      <div class="row ">
+        <h1><i>You Know Eh?</i></h1>
+      </div>
+      <div class="row">
+        <h2>Description</h2>
+      </div>
+      <div class="row">
+        <p>"You Know Eh?" is a flash card application that serves the purposes of learning new languages faster by
+          engaging the user with repetitive memorization. I created this application when I started learning Korean and
+          wanted to have a better way to learn vocabulary. When I tried existing flash cards applications, there was
+          always a few features that I wanted that was missing, so I told myself "why not build one instead?" Since
+          then, this application helped me greatly while learning new languages.</p>
       </div>
 
+      <div class="row">
+        <h2>Media</h2>
+      </div>
+      <div class="row">
+        <div class="row text-center text-lg-left">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('menu')">
+              <img class="project-img interactable" id="menu" src="../img/youknoweh/Menu.png" alt="Menu" nextId='review'
+                previousId='profileList' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('review')">
+              <img class="project-img interactable" id="review" src="../img/youknoweh/Review.png" alt="Review" nextId='cards'
+                previousId='menu' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('cards')">
+              <img class="project-img interactable" id="cards" src="../img/youknoweh/Cards.png" alt="Card List" nextId='cardInfo'
+                previousId='review' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('cardInfo')">
+              <img class="project-img interactable" id="cardInfo" src="../img/youknoweh/CardInfo.png" alt="Card Info"
+                nextId='deckList' previousId='cards' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('deckList')">
+              <img class="project-img interactable" id="deckList" src="../img/youknoweh/DeckList.png" alt="Deck List"
+                nextId='importing' previousId='cardInfo' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('importing')">
+              <img class="project-img interactable" id="importing" src="../img/youknoweh/Importing.png" alt="Example of importing"
+                nextId='quiz' previousId='deckList' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('quiz')">
+              <img class="project-img interactable" id="quiz" src="../img/youknoweh/Quiz.png" alt="Quiz" nextId='statistics'
+                previousId='importing' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('statistics')">
+              <img class="project-img interactable" id="statistics" src="../img/youknoweh/Statistics.png" alt="Statistics"
+                nextId='profile' previousId='quiz' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('profile')">
+              <img class="project-img interactable" id="profile" src="../img/youknoweh/Profile.png" alt="Profile"
+                nextId='profileEdit' previousId='statistics' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('profileEdit')">
+              <img class="project-img interactable" id="profileEdit" src="../img/youknoweh/ProfileEdit.png" alt="Profile Edit"
+                nextId='about' previousId='profile' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('about')">
+              <img class="project-img interactable" id="about" src="../img/youknoweh/About.png" alt="About" nextId='profileList'
+                previousId='profileEdit' style="width:100%;max-width:300px">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <a href="javascript:openModal('profileList')">
+              <img class="project-img interactable" id="profileList" src="../img/youknoweh/ProfileList.png" alt="Profile list"
+                nextId='menu' previousId='about' style="width:100%;max-width:300px">
+            </a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <h2>Main Features</h2>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Review</h3>
+      </div>
+
+      <div class="row">
+        <ul>
+          <li>Review cards by selecting a deck in a random or chronological order</li>
+          <li>Review by 'Language Learning' -> 'Native Language' or vice-versa</li>
+          <li>Toggle a card from review for X hours (also includes an show preview and undo functions if misclicked)</li>
+          <li>Settings for review includes: Modify current card's decks, view card detailed information, shuffle order,
+            always show answers</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Card List</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Display all cards or cards for a selected deck</li>
+          <li>Search card(s) by native or learning name</li>
+          <li>Clicking on a card opens the card's information</li>
+          <li>Long clicking or clicking on more gives the option to: edit card, open quick info, open quick edit,
+            delete card</li>
+          <li>Sort cards by: Language Learning (A-Z) or (Z-A), Native Language (A-Z) or (Z-A), Date Created (New-Old)
+            or (Old-New), Date Modified (New-Old) or (Old-New), Number of decks</li>
+          <li>Add or Remove cards for current selected deck</li>
+          <li>Toggle cards from review for current selected deck</li>
+          <li>Import cards from a csv file</li>
+          <li>Reverse the display information text location</li>
+          <li>Filter the review and non-review cards</li>
+          <li>Quick create (no comments)</li>
+          <li>Open card creation card (if open with a deck selected, the deck will be automaticly added to the card's
+            deck list)</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Card Information</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Language Learning question</li>
+          <li>Meaning in Native Language</li>
+          <li>Comments</li>
+          <li>Card's Decks information (can be in 0, 1 or multiple decks)</li>
+          <li>Date Created and Modified information</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Deck List</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Display all decks in the order the user placed them</li>
+          <li>Clicking on a deck opens the card list on the selected deck</li>
+          <li>Long clicking or clicking on more gives the option to: edit deck, quick information, export deck (csv
+            file), delete deck</li>
+          <li>Reorder decks positions</li>
+          <li>Import one (csv) or multiple (zip) deck(s)</li>
+          <li>Export all decks (zip file)</li>
+          <li>Create new deck</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Quiz</h3>
+      </div>
+      <div class="row">
+        <ul>
+
+          <li>3 types of quizes: Reading, Writing and Multiple Choice</li>
+          <li>Reading: Similar to review but with failed/pass button instead of show next</li>
+          <li>Writing: Spell correctly the given word into the targeted language</li>
+          <li>Multiple Choice: Chose the right translation between 4 multiple choice options</li>
+          <li>New Quiz option: quiz type, include non-review cards, orientation of question asked, which deck(s) to use</li>
+          <li>Take a break and come back to the quiz anytime with the save and continue function</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Quiz History</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Display the past quizzes information and results (# pass/failed) and time taken to complete it</li>
+          <li>Export/Import (csv) quizzes history</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Statistics</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Display the statistics of: Number of cards added or Total number of cards for a date range</li>
+          <li>Select one, multiple or all decks statistics</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Profile</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Multiple profiles with unique cards and decks</li>
+          <li>Each profile has: a name, labels for the front and back of the card, settings, 8 types of background
+            color, background image...</li>
+          <li>Settings include: Default sorting, Quick toggle time (hours), Merge Duplicate cards, View deleted cards,
+            Export profile(s) and more...</li>
+        </ul>
+      </div>
+      <div class="row">
+        <h3 class="list-heading">Profile List</h3>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Scroll list with dynamic background changing depending of the selected profile</li>
+          <li>Display last time that the profile was opened</li>
+          <li>Create new profile</li>
+        </ul>
+      </div>
+      <div class="row">
+        <p>You can view the source code <a href="https://github.com/AlexandreStelzig/YouKnowEhV2" target="_blank"><u>here</u></a></p>
+      </div>
+      <div class="row">
+        <p>If you are interested in an apk for this application, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com"><u>contact
+              me</u></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+
+    <!-- <div class="row"> -->
+    <img class="modal-content" id="modelImage">
 
 
-      <!-- Footer -->
-      <footer>
-         <div class="container text-center">
-            <p>&copy; Alexandre Stelzig 2018</p>
-         </div>
-      </footer>
-      <!-- Bootstrap core JavaScript -->
-      <script src="../vendor/jquery/jquery.min.js"></script>
-      <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- Plugin JavaScript -->
-      <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-      <!-- Custom scripts for this template -->
-      <script src="../js/javascript.js"></script>
-      <script src="../js/modal.js"></script>
+    <!-- </div> -->
+    <div class="row">
+      <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
+      <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
+    </div>
+    <div id="caption"></div>
+  </div>
 
 
-   </body>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; Alexandre Stelzig 2018</p>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="../js/javascript.js"></script>
+  <script src="../js/modal.js"></script>
+
+
+</body>
+
 </html>
-
-

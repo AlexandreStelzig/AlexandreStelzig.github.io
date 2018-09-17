@@ -207,6 +207,16 @@ a:hover {
     padding-bottom: 50px;
 }
 
+.content-section-small {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.content-section-big-top-small-bottom {
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
 #contact {
   background-color: black;
   color: white;
@@ -221,6 +231,17 @@ a:hover {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
+    .content-section-small {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .content-section-big-top-small-bottom {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
     #map {
         height: 350px;
     }
