@@ -8,7 +8,7 @@
   <meta name="author" content="Alexandre Stelzig">
   <meta property="og:image" content="img/profile_picture2.jpg">
   <meta property="og:title" content="Alexandre Stelzig — Mobile Developer">
-  <meta property="og:description" content="Passionate about mobile development. Currently working at BetterSleep.">
+  <meta property="og:description" content="Passionate about mobile development | Mobile Growth.">
   <title>Alexandre Stelzig — Mobile Developer</title>
   <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,7 @@
       <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#top" onclick="closeMenu()">Home</a></li>
+        <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
         <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
         <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
       </ul>
@@ -53,7 +54,7 @@
       <img class="hero-avatar" src="img/profile square.png" alt="Alexandre Stelzig">
       <h1>Hello, I'm <span class="accent">Alex!</span></h1>
       <p class="subtitle">
-        Passionate about everything mobile development.<br/>Currently working on the growth team at
+        Passionate about all things mobile development related.<br/><br/>Currently working on the growth team at
         <a href="https://playpokpok.com/" target="_blank" rel="noopener">Pok Pok</a>
         by making an alternative solution for Non-addictive, educational games for ages 2-8.<br/><br/>Working on few fun side projects as well!
       </p>
@@ -64,13 +65,93 @@
     </div>
   </section>
 
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">Experience</span>
+        <h2>Where I've Worked</h2>
+      </div>
+      <div class="exp-list">
+
+        <div class="exp-card" onclick="toggleExp(this)">
+          <div class="exp-summary">
+            <img class="exp-logo" src="img/logos/pokpok_inc_logo.jpg" alt="Pok Pok">
+            <div class="exp-summary-left">
+              <h3>Senior Android Developer</h3>
+              <p class="exp-company"><a href="https://playpokpok.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Pok Pok</a> · Full-time · <span class="exp-location">Toronto, ON · Remote</span></p>
+              <p class="exp-highlight">Apple Design Award Winner · TIME 100 Most Influential Company 2025</p>
+            </div>
+            <div class="exp-summary-right">
+              <span class="exp-date">Mar 2024 — Present · 2+ yrs</span>
+              <span class="exp-toggle"></span>
+            </div>
+          </div>
+          <div class="exp-details">
+            <ul>
+              <li>Sole Android developer responsible for building the Pok Pok Android app from the ground up by integrating the existing Unity project into a new multi-module Compose KMP architecture and successfully launching it on both Google Play and the Amazon Appstore for 100k+ users.</li>
+              <li>Responsible for everything growth-dev related for the Android application, including customizable onboarding, payment processing, AB testing, cross-platform synchronization and more.</li>
+              <li>Introduced and integrated multiple third party libraries to improve cross-platform processes and achieve our KPIs: Firebase, RevenueCat, Singular, MailChimp, MixPanel and more.</li>
+              <li>Contributed to the creation of the web app which allow users to purchase and manage their web account using: React/Typescript, Stripe, Vercel, Sanity, Firebase, RevenueCat.</li>
+              <li>Worked closely with teams across the company - including Product, Marketing, Customer Service and CRM - to identify their needs as well as propose and implement effective solutions.</li>
+              <li>Laid the foundation for marketing tracking by implementing tools such as CAPI, Facebook Pixel and Singular.</li>
+              <li>Introduced AI as a tool (Claude and Copilot) to the team, establishing developer-supervised workflows that boosted overall productivity.</li>
+              <li>Initiated the development of custom internal solutions after identifying key operational inefficiencies, such as the lack of an onboarding previewer and a centralized customer support admin website.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Kotlin</span>
+              <span>KMP</span>
+              <span>Compose</span>
+              <span>Unity</span>
+              <span>React</span>
+              <span>TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card" onclick="toggleExp(this)">
+          <div class="exp-summary">
+            <img class="exp-logo" src="img/logos/ipnos_software_inc_logo.jpg" alt="BetterSleep">
+            <div class="exp-summary-left">
+              <h3>Mobile Developer</h3>
+              <p class="exp-company"><a href="https://www.bettersleep.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">BetterSleep by Ipnos</a> · Full-time · <span class="exp-location">Greater Montreal Area</span></p>
+              <p class="exp-highlight">Improving sleep for 55M+ people · Acquired by Teladoc Health in 2021</p>
+            </div>
+            <div class="exp-summary-right">
+              <span class="exp-date">Jan 2019 — Mar 2024 · 5 yrs</span>
+              <span class="exp-toggle"></span>
+            </div>
+          </div>
+          <div class="exp-details">
+            <ul>
+              <li>Lead Android developer on the growth team — shipped features with direct impact on revenue and KPIs.</li>
+              <li>Integrated an in-house custom library into onboarding, bridging Kotlin and C++ code with essential callbacks, significantly increasing revenues.</li>
+              <li>Developed the Android subscription manager for Google, Amazon, and Huawei alongside cross-platform profile synchronization.</li>
+              <li>Contributed to key app functions: onboarding, home feeds, remote configs, sleep tracking, guided content streaming, ambient sounds and more.</li>
+              <li>Introduced developer best practices — KMM, 100% Kotlin, Compose, unit testing, whiteboard processes — to enhance quality and reduce miscommunication.</li>
+              <li>Implemented Firebase, Mixpanel, Iterable, AppsFlyer, and Intercom for user behavior analysis.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Kotlin</span>
+              <span>Android Jetpack</span>
+              <span>Compose</span>
+              <span>KMM</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Projects -->
   <section id="projects">
     <div class="section-inner">
       <div class="section-header">
-        <span class="label">Portfolio</span>
-        <h2>Featured Projects</h2>
-        <p>A selection of things I've built and shipped.</p>
+        <span class="label">Side Projects</span>
+        <h2>Personal Projects</h2>
+        <p>A selection of things I've built on the side.</p>
       </div>
       <div class="projects-grid">
 
@@ -78,7 +159,7 @@
           <img class="project-card-img" src="img/acnh/Header.png" alt="ACNH Collection Tracker">
           <div class="project-card-body">
             <h3>ACNH: Collection Tracker Guide</h3>
-            <p>Unofficial guide for Animal Crossing New Horizons. Track your collection progress across fishes, insects, sea creatures, and more. 1.5k+ downloads.</p>
+            <p>Unofficial guide for Animal Crossing New Horizons. Track your collection progress across fishes, insects, sea creatures, and more. 10k+ downloads.</p>
             <div class="project-tags">
               <span>Android</span>
               <span>Kotlin</span>
@@ -172,12 +253,16 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Alexandre Stelzig 2025</p>
+    <p>&copy; Alexandre Stelzig 2026</p>
   </footer>
 
   <script>
     function closeMenu() {
       document.querySelector('.nav-links').classList.remove('open');
+    }
+
+    function toggleExp(card) {
+      card.classList.toggle('open');
     }
 
   </script>
