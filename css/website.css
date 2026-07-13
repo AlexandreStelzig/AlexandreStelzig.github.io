@@ -71,6 +71,20 @@ nav .nav-inner {
   justify-content: space-between;
 }
 
+nav .nav-back {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-right: 8px;
+}
+
+nav .nav-back + .nav-brand {
+  margin-right: auto;
+}
+
+nav .nav-back:hover {
+  color: var(--color-accent);
+}
+
 nav .nav-brand {
   font-weight: 700;
   font-size: 1.1rem;
