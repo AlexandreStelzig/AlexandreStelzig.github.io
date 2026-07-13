@@ -1,173 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Alexandre Stelzig - Android developer</title>
-  <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template -->
-  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template -->
-  <link href="../css/website.css" rel="stylesheet">
-  <!-- logo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Magical Farmer — Alexandre Stelzig</title>
   <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/website.css">
 </head>
-
-<body id="page-top" class="project-background">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="../index.html"> &larr; Home</a>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="navbar-brand js-scroll-trigger" href="../index.html">Alex Stelzig</a>
-        </li>
-      </ul>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="../index.html">Alexandre Stelzig</a>
     </div>
   </nav>
 
+  <div class="project-detail">
+    <div class="project-detail-inner">
+      <a class="project-back" href="../index.html">&larr; Back to projects</a>
+      <h1>The Magical Farmer</h1>
+      <p class="project-description">
+        A Unity 3D video game available on Mac and Windows, created in one month during an introduction to 3D video game programming class in South Korea.
+        <br><br>
+        <strong>Game summary:</strong> Once upon a time, there was a small village living in peace. But one day, monsters invaded the land, stealing and destroying everything. Having no choice, the villagers abandoned the land. But there was one person that still had hope: The Magical Farmer.
+        <br><br>
+        The player plays as the magical farmer. His main goal is to venture into the dungeon and fight waves of enemies. By defeating the waves, he can collect seeds which can be used to grow crops and build new buildings in the city.
+      </p>
 
-  <!-- Project Info Section -->
-  <section id="projects" class="content-section">
-    <div class="container  project-background-description">
-      <div class="row ">
-        <h1><i>The Magical Farmer</i></h1>
-      </div>
-      <div class="row">
-        <p>This is an Unity 3D Video Game available on Mac and Windows that was created in one month during a
-          introduction to 3D video game programming class in South Korea.<br /><br /><b>Game summary:</b><br />Once upon a time,
-          there was a small village living in peace. But one day, monsters invaded the land, stealing and destroying
-          everything. Having no choice, the villagers abandoned the land. But there was one person that still had hope:
-          The magical farmer. <br /><br />The player plays as the magical farmer. His main goal is to venture into the dungeon and
-          fight waves of enemies. By defeating the waves, he can collect seeds which can be used to grow crops
-          and build new buildings in the city. Each building has their own specialty which will help the player become
-          more powerful and defeat stronger enemies.</p>
+      <h2 style="margin-bottom: 24px;">Media</h2>
+      <div class="gallery-grid">
+        <img src="../img/magicalfarmer/combat1.png" alt="Combat 1">
+        <img src="../img/magicalfarmer/combat2.png" alt="Combat 2">
+        <img src="../img/magicalfarmer/crops.png" alt="Crops">
+        <img src="../img/magicalfarmer/map.png" alt="Map">
+        <img src="../img/magicalfarmer/village1.png" alt="Village 1">
+        <img src="../img/magicalfarmer/village2.png" alt="Village 2">
+        <img src="../img/magicalfarmer/stats.png" alt="Stats">
+        <img src="../img/magicalfarmer/settings.png" alt="Settings">
       </div>
 
-      <div class="row">
-        <h2>Media</h2>
-      </div>
-      <div class="row">
-        <div class="row text-center text-lg-left">
+      <h2 style="margin-top: 48px; margin-bottom: 16px;">Main Features</h2>
+      <ul style="color: var(--color-text-muted); line-height: 2;">
+        <li>Fight 6 types of enemies using 4 different skills</li>
+        <li>Collect seeds by defeating waves of enemies</li>
+        <li>Plant seeds on your farm to get crops</li>
+        <li>Use the crops to rebuild the village (6 different types of buildings)</li>
+        <li>Become more powerful by interacting with the NPCs</li>
+        <li>Complete a quest chain to unlock a secret zone</li>
+        <li>Day/Night cycle with dynamic lighting and sound</li>
+        <li>Try to reach the highest level in the 'Infinity Waves' Level</li>
+      </ul>
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('combat1')">
-              <img class="project-img interactable" id="combat1" src="../img/magicalfarmer/combat1.png" alt="Combat"
-                nextId='combat2' previousId='settings' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('combat2')">
-              <img class="project-img interactable" id="combat2" src="../img/magicalfarmer/combat2.png" alt="Skill"
-                nextId='crops' previousId='combat1' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('crops')">
-              <img class="project-img interactable" id="crops" src="../img/magicalfarmer/crops.png" alt="Crops" nextId='gameMap'
-                previousId='settings' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('gameMap')">
-              <img class="project-img interactable" id="gameMap" src="../img/magicalfarmer/map.png" alt="Skill" nextId='village1'
-                previousId='crops' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('village1')">
-              <img class="project-img interactable" id="village1" src="../img/magicalfarmer/village1.png" alt="Building window"
-                nextId='village2' previousId='gameMap' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('village2')">
-              <img class="project-img interactable" id="village2" src="../img/magicalfarmer/village2.png" alt="Blacksmith"
-                nextId='stats' previousId='village1' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('stats')">
-              <img class="project-img interactable" id="stats" src="../img/magicalfarmer/stats.png" alt="Player's Stats"
-                nextId='settings' previousId='village2' style="width:100%;max-width:300px">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <a href="javascript:openModal('settings')">
-              <img class="project-img interactable" id="settings" src="../img/magicalfarmer/settings.png" alt="Settings"
-                nextId='combat1' previousId='stats' style="width:100%;max-width:300px">
-            </a>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="row">
-        <h2>Main Features</h2>
-      </div>
-      <div class="row">
-        <ul>
-          <li>Fight 6 types of enemies using 4 different skills</li>
-          <li>Collect seeds by defeating waves of enemies</li>
-          <li>Plant seeds on your farm to get crops</li>
-          <li>Use the crops to rebuild the village (6 different types of buildings)</li>
-          <li>Become more powerful by interacting with the npcs that appears with the buildings</li>
-          <li>Complete a quest chain to unlock a secret zone</li>
-          <li>Day/Night cycle with dynamic lighting and sound</li>
-          <li>Try to reach the highest level by attempting the 'Infinity Waves' Level</li>
-        </ul>
-      </div>
-      <div class="row">
-        <p><a href="https://www.youtube.com/watch?v=exC9Ocg30wY" target="_blank"><u>Here</u></a> is a short video
-          showing the 'Infinity Waves' Level.</p>
-      </div>
-      <div class="row">
-        <p>You can play the game online at <a href="http://magicalfarmergame.github.io/" target="_blank"><u>http://magicalfarmergame.github.io/</u></a>
-          *</p>
-        <p>If you are interested in playing the PC version of this game, feel free to <a href="mailto:Alexandre.Stelzig@gmail.com"><u>contact
-              me</u></a></p>
-        <p><small>*some issues might occur because this game wasn't designed for web</small></p>
-      </div>
+      <p style="margin-top: 24px; color: var(--color-text-muted);">
+        <a href="https://www.youtube.com/watch?v=exC9Ocg30wY" target="_blank" rel="noopener">Watch a short video</a> showing the Infinity Waves level.
+        <br>
+        Play the game online at <a href="http://magicalfarmergame.github.io/" target="_blank" rel="noopener">magicalfarmergame.github.io</a>.
+        <br>
+        Interested in the PC version? <a href="mailto:Alexandre.Stelzig@gmail.com">Contact me</a>.
+      </p>
     </div>
-  </section>
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-
-    <!-- <div class="row"> -->
-    <img class="modal-content" id="modelImage">
-
-
-    <!-- </div> -->
-    <div class="row">
-      <a id="previousButton" href="javascript:previousClicked()" class="previous text">&laquo; Previous</a>
-      <a id="nextButton" href="javascript:nextClicked()" class="next text">Next &raquo;</a>
-    </div>
-    <div id="caption"></div>
   </div>
 
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+    <img src="" alt="">
+    <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  </div>
 
-
-  <!-- Footer -->
-  <footer>
-    <div class="container text-center">
-      <p>&copy; Alexandre Stelzig 2024</p>
-    </div>
-  </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Plugin JavaScript -->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
-  <script src="../js/javascript.js"></script>
-  <script src="../js/modal.js"></script>
-
-
+  <footer><p>&copy; Alexandre Stelzig 2025</p></footer>
+  <script src="../js/lightbox.js"></script>
 </body>
-
 </html>

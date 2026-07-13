@@ -3,200 +3,184 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" property="og:description" content="Portfolio of programming projects of Alexandre Stelzig">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Alexandre Stelzig — Mobile Developer">
   <meta name="author" content="Alexandre Stelzig">
-  <meta name="image" property="og:image" content="img/profile_picture.jpg">
-  <meta name="title" property="og:title" content="Alexandre's Stelzig Website">
-  <title>Alexandre Stelzig - Android developer </title>
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template -->
-  <link href="css/website.css" rel="stylesheet">
-  <!-- logo -->
+  <meta property="og:image" content="img/profile_picture2.jpg">
+  <meta property="og:title" content="Alexandre Stelzig — Mobile Developer">
+  <meta property="og:description" content="Passionate about mobile development. Currently working at BetterSleep.">
+  <title>Alexandre Stelzig — Mobile Developer</title>
   <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/website.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128558215-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-128558215-1');
   </script>
-
 </head>
 
-<body id="page-top">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Alexandre Stelzig</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<body>
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Alexandre Stelzig</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#top" onclick="closeMenu()">Home</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Intro Header -->
-  <header id="home" class="masthead">
-    <div class="intro-body">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <img class=" circular_image" src="img/profile square.png" />
-            <br>
-            <br>
-            <div class="black-background">
-              <h3 class="brand-heading">Hello! I'm Alex!</h3>
-            </div>
-            <br>
-            <div class="black-background">
-              <p class="intro-text">Passionate about everything related to mobile development.<br/>Currently working for
-                <u><a href="https://www.bettersleep.com/" target="_blank">BetterSleep</a></u> (55+
-                million downloads) and a few fun projects!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-bg">
+
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
     </div>
-  </header>
-
-
-
-
-  <!-- About Section -->
-  <section id="projects" class="content-section text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
-          <a href="projects/ACNH.html"><img id="project-img" class="img-responsive interactable"
-              src="img/acnh/Header.png"></a>
-        </div>
-        <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
-          <br>
-          <a href="projects/ACNH.html">
-            <h2>ACNH: Collection Tracker Guide</h2>
-          </a>
-          <p>Android application for an unofficial guide for Animal Crossing New Horizon. Keep track of your ACNH: New Horizon collection progress.</p>
-          <p><small>Android, kotlin, firebase</small></p>
-        </div>
-      </div>
-      <br>
-      <br>
-      <hr>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
-          <a href="projects/TheMagicalFarmer.html"><img id="project-img" class="img-responsive interactable"
-              src="img/magicalfarmer/combat1.png"></a>
-        </div>
-        <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
-          <br>
-          <a href="projects/TheMagicalFarmer.html">
-            <h2>The Magical Farmer</h2>
-          </a>
-          <p>Unity 3D Video Game created for the 'Introduction to 3D Game Programming' course at Dongguk University,
-            Seoul, South Korea. This project was designed and implemented in one month by myself and has around 1.5 to
-            2 hours of gameplay.</p>
-          <p><small>Unity 3D, C#</small></p>
-        </div>
-      </div>
-      <br>
-      <br>
-      <hr>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-xs-6 col-md-6 col-lg-6 vcenter">
-          <a href="projects/MemoSwipe.html"><img id="project-img" class="img-responsive interactable"
-              src="img/memoswipe/header.png"></a>
-        </div>
-        <div class="col-xs-6 col-md-6 col-lg-6 vcenter text-left">
-          <br>
-          <a href="projects/MemoSwipe.html">
-            <h2>MemoSwipe</h2>
-          </a>
-          <p>An android flash card application that serves the purpose of learning new languages faster by repetitve
-            memorization.</p>
-          <p><small>Android, firebase</small></p>
-        </div>
-      </div>
-
-  </section>
-
-  <!--       <br>
-      <div class="triangle"></div> -->
-
-  <!-- Map Section -->
-  <!-- <div id="map"></div> -->
-
-
-  <!-- Contact Section -->
-  <section id="contact" class="content-section text-center">
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mx-auto">
-          <img id="contact-img" class="img-responsive" src="img/profile_picture2.jpg">
-          <br>
-          <br>
-          <p>Want to get in touch? Email me at <u><a id="white-a" href="mailto:alexandre.stelzig@gmail.com"
-                target="_blank">alexandre.stelzig@gmail.com</a></u></p>
-          <p>or</p>
-          <div>
-            <div class="social-media">
-              <a href="https://github.com/AlexandreStelzig" target="_blank">
-                <span class="fa fa-github-square fa-2x fa-fw"></span>
-              </a>
-              <a href="https://www.linkedin.com/in/alexstelzig/" target="_blank">
-                <span class="fa fa-linkedin-square fa-2x fa-fw"></span>
-              </a>
-              <!-- <a href="mailto:Alexandre.Stelzig@gmail.com">
-                <span class="fa fa fa-envelope fa-2x fa-fw"></span>
-              </a> -->
-
-            </div>
-            <br>
-          </div>
-        </div>
+    <div class="hero-content">
+      <img class="hero-avatar" src="img/profile square.png" alt="Alexandre Stelzig">
+      <h1>Hello, I'm <span class="accent">Alex!</span></h1>
+      <p class="subtitle">
+        Passionate about everything mobile development.<br/>Currently working on the growth team at
+        <a href="https://playpokpok.com/" target="_blank" rel="noopener">Pok Pok</a>
+        by making an alternative solution for Non-addictive, educational games for ages 2-8.<br/><br/>Working on few fun side projects as well!
+      </p>
+      <div class="hero-links">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://github.com/AlexandreStelzig" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
       </div>
     </div>
   </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">Portfolio</span>
+        <h2>Featured Projects</h2>
+        <p>A selection of things I've built and shipped.</p>
+      </div>
+      <div class="projects-grid">
+
+        <a href="projects/ACNH.html" class="project-card">
+          <img class="project-card-img" src="img/acnh/Header.png" alt="ACNH Collection Tracker">
+          <div class="project-card-body">
+            <h3>ACNH: Collection Tracker Guide</h3>
+            <p>Unofficial guide for Animal Crossing New Horizons. Track your collection progress across fishes, insects, sea creatures, and more. 1.5k+ downloads.</p>
+            <div class="project-tags">
+              <span>Android</span>
+              <span>Kotlin</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/TheMagicalFarmer.html" class="project-card">
+          <img class="project-card-img" src="img/magicalfarmer/combat1.png" alt="The Magical Farmer">
+          <div class="project-card-body">
+            <h3>The Magical Farmer</h3>
+            <p>Unity 3D video game created at Dongguk University, Seoul. Designed and built solo in one month with ~2 hours of gameplay.</p>
+            <div class="project-tags">
+              <span>Unity 3D</span>
+              <span>C#</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/MemoSwipe.html" class="project-card">
+          <img class="project-card-img" src="img/memoswipe/header.png" alt="MemoSwipe">
+          <div class="project-card-body">
+            <h3>MemoSwipe</h3>
+            <p>Android flashcard app for learning new languages through repetitive memorization with a swipe-based interface.</p>
+            <div class="project-tags">
+              <span>Android</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/GoalTracker.html" class="project-card">
+          <img class="project-card-img" src="img/goaltracker/Header.png" alt="Goal Tracker">
+          <div class="project-card-body">
+            <h3>Goal Tracker</h3>
+            <p>Track and manage your personal goals with a clean, intuitive mobile interface.</p>
+            <div class="project-tags">
+              <span>Android</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/YouKnowEh.html" class="project-card">
+          <img class="project-card-img" src="img/youknoweh/Cards.png" alt="YouKnowEh">
+          <div class="project-card-body">
+            <h3>YouKnowEh</h3>
+            <p>A card-based knowledge app with deck management and an engaging learning experience.</p>
+            <div class="project-tags">
+              <span>Android</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/JELLO.html" class="project-card">
+          <img class="project-card-img" src="img/jello/websiteIntro.png" alt="JELLO">
+          <div class="project-card-body">
+            <h3>JELLO</h3>
+            <p>Full-stack web application with registration management, news, and event organization features.</p>
+            <div class="project-tags">
+              <span>Web</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">Contact</span>
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-content">
+        <p>Have a question or want to work together? Feel free to reach out.</p>
+        <a class="contact-email" href="mailto:alexandre.stelzig@gmail.com">alexandre.stelzig@gmail.com</a>
+        <div class="social-links">
+          <a href="https://github.com/AlexandreStelzig" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/alexstelzig/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <div class="container text-center">
-      <p>&copy; Alexandre Stelzig 2024</p>
-    </div>
+    <p>&copy; Alexandre Stelzig 2025</p>
   </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
-  <script src="js/javascript.js"></script>
-  <script src="js/emailManager.js"></script>
+
+  <script>
+    function closeMenu() {
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+
+  </script>
 </body>
 
 </html>
