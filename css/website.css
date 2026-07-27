@@ -706,6 +706,12 @@ footer p {
   margin-bottom: 16px;
 }
 
+.project-year {
+  font-weight: 400;
+  font-size: 0.6em;
+  color: var(--color-text-muted);
+}
+
 .project-detail .project-description {
   color: var(--color-text-muted);
   font-size: 1.05rem;
