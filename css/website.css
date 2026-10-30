@@ -698,6 +698,12 @@ footer p {
   transition: all var(--transition);
 }
 
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .btn-store:hover {
   background: var(--color-accent-hover);
   color: #fff;

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puzzle Vault — Alexandre Stelzig</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/website.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-back" href="../index.html" onclick="if (history.length > 1) { event.preventDefault(); history.back(); }" aria-label="Back to all projects"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a>
+      <a class="nav-brand" href="../index.html">Alexandre Stelzig</a>
+    </div>
+  </nav>
+
+  <div class="project-detail">
+    <div class="project-detail-inner">
+      <header class="project-top">
+        <div>
+          <div class="project-kicker">Side project · Mobile</div>
+          <h1>Puzzle Vault <span class="project-year">(2026)</span></h1>
+          <p class="project-description">
+        A calm collection of offline puzzle games for iOS and Android, built with a partner. A new puzzle arrives every day, alongside 1,300+ hand-tuned levels across 10+ games: block puzzles, water sort, pipe connect, pentominoes, color mixing, Lights Out and more. No ads, no lives, no timers.
+        <br><br>
+        The app is built with Kotlin Multiplatform, with the puzzle games running on Godot. RevenueCat handles the one-time purchase and tips, and Firebase powers the daily puzzle and accounts.
+              </p>
+          <div class="project-tags"><span>KMP</span><span>Godot</span><span>RevenueCat</span><span>Firebase</span></div>
+          <div class="store-buttons">
+            <a class="btn-store" href="https://apps.apple.com/us/app/puzzle-vault-daily-puzzles/id6795653516" target="_blank" rel="noopener">App Store</a>
+            <a class="btn-store" href="https://play.google.com/store/apps/details?id=com.swiftpath.playroom" target="_blank" rel="noopener">Google Play</a>
+            <a class="btn-store" href="https://tryswiftpath.com/" target="_blank" rel="noopener">Website</a>
+          </div>
+        </div>
+        <img class="project-top-img icon" src="../img/puzzlevault/icon.png" alt="Puzzle Vault">
+      </header>
+
+      <h2 style="margin-bottom: 24px;">Media</h2>
+      <div class="gallery-grid">
+        <img src="../img/puzzlevault/01_daily_puzzle.png" alt="Daily puzzle with streak">
+        <img src="../img/puzzlevault/02_puzzles.png" alt="All games and chapters">
+        <img src="../img/puzzlevault/03_badges.png" alt="Badges and medals">
+        <img src="../img/puzzlevault/04_lights_out.png" alt="Lights Out">
+        <img src="../img/puzzlevault/05_pigment.png" alt="Pigment color mixing">
+        <img src="../img/puzzlevault/06_pour_sort.png" alt="Pour Sort">
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+    <img src="" alt="">
+    <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  </div>
+
+  <footer><p>&copy; Alexandre Stelzig 2026</p></footer>
+  <script src="../js/lightbox.js"></script>
+
+</body>
+</html>
