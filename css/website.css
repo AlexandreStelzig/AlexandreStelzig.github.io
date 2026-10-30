@@ -396,9 +396,11 @@ html:has(.exp-modal[open]) {
   scrollbar-gutter: stable;
 }
 
-/* touch browsers resize the viewport when overflow flips (URL bar), which jostles fixed UI; the dialog's overscroll-behavior already contains scrolling */
+/* touch: keep the page frozen behind a dialog so drags can't scroll it and collapse the browser toolbar mid-dialog */
 @media (pointer: coarse) {
-  html:has(.exp-modal[open]) { overflow: visible; scrollbar-gutter: auto; }
+  html:has(.exp-modal[open]) { scrollbar-gutter: auto; }
+  body:has(.exp-modal[open]) { overflow: hidden; touch-action: none; }
+  .exp-modal { touch-action: pan-y; }
 }
 
 .exp-modal {
