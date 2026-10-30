@@ -1144,8 +1144,8 @@ footer { position: relative; }
 /* playful bits are for clicking, not selecting: no text highlight or tap flash */
 .hero h1, .xylo-tip, .hunt, .slot, .egg, .acorn-spot, .wave-hint, .hint-dialog, .reward-dialog, .pop, .flyer { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
 
-/* touch: a looping animation on the last element keeps the page's scroll range recalculating at the bottom */
+/* touch: keep the dog animation but run it on the compositor so the page bottom does not re-layout every frame */
 @media (pointer: coarse) {
-  #dog, #dog.found { animation: none; }
-  #dog::after { animation: none; opacity: .8; }
+  #dog { will-change: transform; contain: layout; }
+  #dog::after { will-change: transform, opacity; }
 }
