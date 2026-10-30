@@ -13,8 +13,8 @@
 <body>
   <nav>
     <div class="nav-inner">
+      <a class="nav-back" href="../index.html" onclick="if (history.length > 1) { event.preventDefault(); history.back(); }" aria-label="Back to all projects"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a>
       <a class="nav-brand" href="../index.html">Alexandre Stelzig</a>
-      <a class="back-pill" href="../index.html#projects">&larr; All projects</a>
     </div>
   </nav>
 
@@ -70,5 +70,6 @@
 
   <footer><p>&copy; Alexandre Stelzig 2026</p></footer>
   <script src="../js/lightbox.js"></script>
+
 </body>
 </html>
