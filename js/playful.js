@@ -163,6 +163,13 @@
   if (!shelf) { shelf = document.createElement('div'); shelf.id = 'hunt'; shelf.className = 'hunt'; document.body.appendChild(shelf); }
   shelf.setAttribute('role', 'group'); shelf.setAttribute('aria-label', 'Collection of little secrets');
   shelf.innerHTML = ITEMS.map(function (it) { return '<button class="slot" data-k="' + it.k + '" data-hint="' + it.hint + '" aria-label="' + it.hint + '">' + ART[it.art] + '</button>'; }).join('');
+  /* on touch the browser toolbar resizes the viewport mid-scroll and fixed UI jumps; fade the pill out while scrolling */
+  var scrollTimer;
+  addEventListener('scroll', function () {
+    shelf.classList.add('scrolling');
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function () { shelf.classList.remove('scrolling'); }, 250);
+  }, { passive: true });
   function count() { return ITEMS.filter(function (it) { return found[it.k]; }).length; }
   function paint() {
     ITEMS.forEach(function (it) {
