@@ -991,6 +991,10 @@ footer p {
 .hunt .slot.pop-in { animation: slotpop .6s var(--spring); }
 @keyframes slotpop { 40% { transform: scale(1.35) } }
 .hunt.complete { border-color: var(--color-accent); }
+/* no sideways pan or edge bounce on touch, so fixed UI can't be dragged around at the page ends */
+@media (pointer: coarse) {
+  html, body { overflow-x: clip; overscroll-behavior: none; }
+}
 @media (pointer: coarse) {
   .hunt { transition: opacity .25s; }
   .hunt.scrolling { opacity: 0; pointer-events: none; }
