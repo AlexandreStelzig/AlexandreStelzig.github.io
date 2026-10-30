@@ -989,6 +989,10 @@ footer p {
 .hunt .slot.pop-in { animation: slotpop .6s var(--spring); }
 @keyframes slotpop { 40% { transform: scale(1.35) } }
 .hunt.complete { border-color: var(--color-accent); }
+/* anchor to the small viewport so the pill doesn't ride the mobile URL bar as it collapses */
+@supports (height: 100svh) {
+  @media (pointer: coarse) { .hunt { bottom: auto; top: calc(100svh - 16px); transform: translateY(-100%); } }
+}
 .hunt .slot::after { content: attr(data-hint); position: absolute; right: 0; bottom: calc(100% + 12px); width: max-content; max-width: 210px; padding: 6px 12px; border-radius: 12px; background: var(--color-surface-alt); color: var(--color-text); border: 1px solid var(--color-border); font: 500 .78rem/1.35 var(--font-sans); text-align: left; opacity: 0; transform: translateY(4px); pointer-events: none; transition: opacity .2s, transform .2s; }
 .hunt .slot.on::after { content: none; }
 .hunt .slot:hover::after, .hunt .slot:focus-visible::after { opacity: 1; transform: none; }
