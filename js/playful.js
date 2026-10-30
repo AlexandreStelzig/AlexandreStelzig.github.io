@@ -16,6 +16,7 @@
     sapling: svg('<path d="M16 26V9" fill="none"' + S + '/><path d="M16 22c-1-4-5-5-9-4 0 4 4 5 9 4z" fill="#8fae86"' + S + '/><path d="M16 19c1-4 5-5 9-4 0 4-4 5-9 4z" fill="#8fae86"' + S + '/><path d="M16 14c-1-4-4-6-8-5 0 4 3 6 8 5z" fill="#8fae86"' + S + '/><path d="M16 11c1-4 4-6 8-5 0 4-3 6-8 5z" fill="#8fae86"' + S + '/><path d="M6 27c3-3 17-3 20 0z" fill="#8a5a3c"' + S + '/>'),
     tree: svg('<path d="M14 28V19h4v9z" fill="#8a5a3c"' + S + '/><circle cx="9.500" cy="15" r="5.500" fill="#8fae86"' + S + '/><circle cx="22.500" cy="15" r="5.500" fill="#8fae86"' + S + '/><circle cx="16" cy="10.500" r="7" fill="#8fae86"' + S + '/>'),
     leaf: svg('<path d="M5 27C5 12 14 5 27 5c0 13-7 22-20 22z" fill="#8fae86"' + S + '/><path d="M5 27L19 13" fill="none"' + S + '/>'),
+    hand: svg('<path d="M9 17V8.500a1.600 1.600 0 0 1 3.200 0V15M12.200 14V5.500a1.600 1.600 0 0 1 3.200 0V14M15.400 14V6.500a1.600 1.600 0 0 1 3.200 0V15M18.600 15V9.500a1.600 1.600 0 0 1 3.200 0V19c0 5-3 8-7.500 8-3 0-5-1.500-6.500-4L5 18.500a1.700 1.700 0 0 1 2.800-1.800L9 18" fill="#e5b84c"' + S + '/><path d="M24 6c1.500 1 2.500 2.500 3 4M26 3c2.500 1.500 4 3.500 4.500 6" fill="none"' + S + '/>'),
     star: svg('<path d="M16 4l3.2 7 7.6.8-5.7 5.2 1.6 7.5L16 20.6 9.3 24.5l1.6-7.5L5.2 11.8l7.6-.8z" fill="#f1d58a"' + S + '/>'),
     coin: svg('<circle cx="16" cy="16" r="11" fill="#e5b84c"' + S + '/><path d="M16 10v12M12.5 13.5h6a2 2 0 0 1 0 4h-5" fill="none"' + S + '/>'),
     note: svg('<path d="M12 24V7l13-3v17" fill="none"' + S + '/><ellipse cx="9" cy="24" rx="4.5" ry="3.5" fill="#d98a6c"' + S + '/><ellipse cx="22" cy="21" rx="4.5" ry="3.5" fill="#d98a6c"' + S + '/>'),
@@ -72,6 +73,8 @@
     },
     /* two woofs: a buzzy voice that drops in pitch through a vowel-ish filter, with a puff of breath */
     bark: function () { woof(0, 470); woof(0.24, 510); },
+    /* three rising xylophone bars, a beat after the last click rings */
+    success: function () { [0, 2, 4].forEach(function (n, i) { setTimeout(function () { bar(SCALE[n + 3]); }, 250 + i * 130); }); },
     ding: function () { tone(1318, 0, 1, 'triangle', 0.1); tone(1975, 0, 0.5, 'sine', 0.05); },
     hello: function () { tone(523.25, 0, 0.5, 'sine', 0.1); tone(659.25, 0.12, 0.6, 'sine', 0.1); },
     leaf: function () { tone(698, 0, 0.5, 'triangle', 0.07); },
@@ -283,8 +286,8 @@
   var av = $('#avatar'), avClicks = 0;
   if (av) av.addEventListener('click', function (e) {
     av.classList.remove('boing'); void av.offsetWidth; av.classList.add('boing');
-    SOUND.hello(); burst(e.clientX, e.clientY, ['leaf'], 2);
-    if (++avClicks === 3) find('avatar', null, e.clientX, e.clientY);
+    SOUND.hello(); burst(e.clientX, e.clientY, ['hand'], 2);
+    if (++avClicks === 3) find('avatar', found.avatar ? null : 'success', e.clientX, e.clientY);
   });
 
   /* brand acorn */
@@ -366,7 +369,7 @@
           n.style.setProperty('--wd', d * 70 + 'ms'); n.classList.remove('wave'); void n.offsetWidth; n.classList.add('wave');
         });
       }
-      if (++plays === NEED) find('xylo', null, e.clientX, e.clientY, ['note', 'note']);
+      if (++plays === NEED && !found.xylo) find('xylo', 'success', e.clientX, e.clientY, ['note', 'note']);
     });
   }
 
