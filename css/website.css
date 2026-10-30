@@ -1095,3 +1095,6 @@ footer { position: relative; }
 /* end-of-hunt confetti: full-screen, click-through */
 .confetti { position: fixed; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; background: none; overflow: visible; pointer-events: none; z-index: 500; }
 @media (max-width: 600px) { .xylo-tip { top: 26px; } }
+
+/* playful bits are for clicking, not selecting: no text highlight or tap flash */
+.hero h1, .xylo-tip, .hunt, .slot, .egg, .acorn-spot, .wave-hint, .hint-dialog, .reward-dialog, .pop, .flyer { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
