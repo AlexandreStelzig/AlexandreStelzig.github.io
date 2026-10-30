@@ -357,6 +357,9 @@
       });
     };
     walk(h1);
+    var C_MAJOR = [65.41, 73.42, 82.41, 87.31, 98, 110, 123.47];
+    /* tiny speakers cannot play the lowest bars, so the harmonics carry the pitch there: lean on them below ~260 Hz */
+    var xyloBar = function (f) { var low = f < 260; tone(f, 0, 0.9, low ? 'triangle' : 'sine', 0.2); tone(f * 2, 0, 0.5, 'sine', low ? 0.12 : 0.03); tone(f * 4, 0, 0.18, 'sine', 0.05); };
     var NEED = 5, plays = 0, tip = document.createElement('div');
     tip.className = 'xylo-tip'; tip.setAttribute('aria-hidden', 'true'); tip.innerHTML = '<span>♪ try clicking the letters</span><svg viewBox="0 0 60 44" width="60" height="44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M52 3C50 22 34 34 9 36"/><path d="M18 28L8 36l11 6"/></svg>';
     if (!found.xylo) { h1.parentNode.classList.add('has-tip'); h1.parentNode.appendChild(tip); }
@@ -366,11 +369,11 @@
       if (plays + 1 >= NEED) tip.classList.add('gone');
       else label.textContent = '♪ ' + (NEED - plays - 1) + ' more click' + (NEED - plays - 1 === 1 ? '' : 's') + '…'
         label.classList.remove('tick'); void label.offsetWidth; label.classList.add('tick');
-      var code = ch.textContent.toLowerCase().charCodeAt(0);
-      bar(SCALE[code % SCALE.length]);
+      var all = Array.prototype.slice.call(h1.querySelectorAll('.ch')), at = all.indexOf(ch);
+      /* letters climb C D E F G A B and keep going up, one octave higher each time round */
+      xyloBar(C_MAJOR[at % C_MAJOR.length] * Math.pow(2, Math.floor(at / C_MAJOR.length)));
       ch.classList.remove('ring'); void ch.offsetWidth; ch.classList.add('ring');
       if (found.xylo) {
-        var all = Array.prototype.slice.call(h1.querySelectorAll('.ch')), at = all.indexOf(ch);
         for (var d = 1; d <= 4; d++) [at - d, at + d].forEach(function (j) {
           var n = all[j]; if (!n) return;
           n.style.setProperty('--wd', d * 70 + 'ms'); n.classList.remove('wave'); void n.offsetWidth; n.classList.add('wave');
