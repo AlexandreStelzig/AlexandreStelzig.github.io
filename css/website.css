@@ -992,11 +992,19 @@ footer p {
 body { background-image: radial-gradient(ellipse 80% 60% at 50% 0, rgba(241, 213, 138, calc(var(--found, 0) * .09)), transparent 70%); background-attachment: fixed; }
 
 /* xylophone: headline letters take the bar colors */
-.has-xylo .hero h1 .ch[data-c="0"] { color: #d98a6c; }
-.has-xylo .hero h1 .ch[data-c="1"] { color: #d9a92e; }
-.has-xylo .hero h1 .ch[data-c="2"] { color: #6f9b66; }
-.has-xylo .hero h1 .ch[data-c="3"] { color: #5f8fb4; }
+.has-xylo .hero h1 .ch[data-c="0"] { color: #d4825f; }
+.has-xylo .hero h1 .ch[data-c="1"] { color: #cfa23a; }
+.has-xylo .hero h1 .ch[data-c="2"] { color: #7a9c6a; }
+.has-xylo .hero h1 .ch[data-c="3"] { color: #8c78b0; }
 .has-xylo .hero h1 .ch.wave { animation: ring .55s ease var(--wd, 0ms); }
+
+/* floating hint by the headline: handwritten note with an arrow, fades in late, leaves after the first click */
+.has-tip { position: relative; }
+.xylo-tip { position: absolute; top: -4px; right: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 0; color: var(--color-accent); font: italic 600 .9rem/1.2 var(--font-serif); transform: rotate(3deg); opacity: 0; pointer-events: none; animation: tip-in .6s ease 2.5s forwards; transition: opacity .3s; }
+.xylo-tip svg { margin-right: 10px; margin-top: 2px; }
+.xylo-tip.gone { opacity: 0 !important; animation: none; }
+@keyframes tip-in { to { opacity: .9 } }
+@media (prefers-reduced-motion: reduce) { .xylo-tip { animation-duration: .01s; } }
 
 /* acorn: grows into a tree (sprout, sapling, tree), replayed on every click */
 .project-card { position: relative; }
@@ -1084,3 +1092,4 @@ footer { position: relative; }
 
 /* end-of-hunt confetti: full-screen, click-through */
 .confetti { position: fixed; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; background: none; overflow: visible; pointer-events: none; z-index: 500; }
+@media (max-width: 600px) { .xylo-tip { top: 26px; } }

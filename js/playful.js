@@ -11,7 +11,7 @@
     paw: svg('<ellipse cx="16" cy="21" rx="6" ry="5" fill="#d98a6c"/><circle cx="8" cy="14" r="2.600" fill="#d98a6c"/><circle cx="13" cy="9" r="2.600" fill="#d98a6c"/><circle cx="19" cy="9" r="2.600" fill="#d98a6c"/><circle cx="24" cy="14" r="2.600" fill="#d98a6c"/>'),
     mug: svg('<path d="M6 12h16v9a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z" fill="#d98a6c"' + S + '/><path d="M22 14h2a3.5 3.5 0 0 1 0 7h-2" fill="none"' + S + '/><path d="M11 8c0-2 2-2 2-4M17 8c0-2 2-2 2-4" fill="none"' + S + '/>'),
     acorn: svg('<path d="M7 14h18c0 8-4 14-9 14s-9-6-9-14z" fill="#d9a066"' + S + '/><path d="M6 14c0-5 4-8 10-8s10 3 10 8z" fill="#8a5a3c"' + S + '/><path d="M16 6V3" fill="none"' + S + '/>'),
-    xylo: svg('<rect x="3" y="5" width="5" height="22" rx="2" fill="#d98a6c"' + S + '/><rect x="9.5" y="8" width="5" height="19" rx="2" fill="#e5b84c"' + S + '/><rect x="16" y="11" width="5" height="16" rx="2" fill="#8fae86"' + S + '/><rect x="22.5" y="14" width="5" height="13" rx="2" fill="#86a9c4"' + S + '/>'),
+    xylo: svg('<rect x="3" y="5" width="5" height="22" rx="2" fill="#d4825f"' + S + '/><rect x="9.5" y="8" width="5" height="19" rx="2" fill="#cfa23a"' + S + '/><rect x="16" y="11" width="5" height="16" rx="2" fill="#7a9c6a"' + S + '/><rect x="22.5" y="14" width="5" height="13" rx="2" fill="#8c78b0"' + S + '/>'),
     sprout: svg('<path d="M16 26v-9" fill="none"' + S + '/><path d="M16 19c-1-5-5-6-9-5 0 4 4 6 9 5z" fill="#8fae86"' + S + '/><path d="M16 17c1-5 5-6 9-5 0 4-4 6-9 5z" fill="#8fae86"' + S + '/><path d="M6 27c3-3 17-3 20 0z" fill="#8a5a3c"' + S + '/>'),
     sapling: svg('<path d="M16 26V9" fill="none"' + S + '/><path d="M16 22c-1-4-5-5-9-4 0 4 4 5 9 4z" fill="#8fae86"' + S + '/><path d="M16 19c1-4 5-5 9-4 0 4-4 5-9 4z" fill="#8fae86"' + S + '/><path d="M16 14c-1-4-4-6-8-5 0 4 3 6 8 5z" fill="#8fae86"' + S + '/><path d="M16 11c1-4 4-6 8-5 0 4-3 6-8 5z" fill="#8fae86"' + S + '/><path d="M6 27c3-3 17-3 20 0z" fill="#8a5a3c"' + S + '/>'),
     tree: svg('<path d="M14 28V19h4v9z" fill="#8a5a3c"' + S + '/><circle cx="9.500" cy="15" r="5.500" fill="#8fae86"' + S + '/><circle cx="22.500" cy="15" r="5.500" fill="#8fae86"' + S + '/><circle cx="16" cy="10.500" r="7" fill="#8fae86"' + S + '/>'),
@@ -341,9 +341,12 @@
       });
     };
     walk(h1);
-    var plays = 0;
+    var plays = 0, tip = document.createElement('div');
+    tip.className = 'xylo-tip'; tip.setAttribute('aria-hidden', 'true'); tip.innerHTML = '<span>♪ try clicking the letters</span><svg viewBox="0 0 60 44" width="60" height="44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M52 3C50 22 34 34 9 36"/><path d="M18 28L8 36l11 6"/></svg>';
+    if (!found.xylo) { h1.parentNode.classList.add('has-tip'); h1.parentNode.appendChild(tip); }
     h1.addEventListener('click', function (e) {
       var ch = e.target.closest('.ch'); if (!ch) return;
+      tip.classList.add('gone');
       var code = ch.textContent.toLowerCase().charCodeAt(0);
       bar(SCALE[code % SCALE.length]);
       ch.classList.remove('ring'); void ch.offsetWidth; ch.classList.add('ring');
