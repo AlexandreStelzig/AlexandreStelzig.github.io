@@ -381,6 +381,7 @@ section {
   margin: auto;
   width: min(680px, calc(100% - 32px));
   max-height: calc(100vh - 48px);
+  max-height: calc(100svh - 48px);
   overflow-y: auto;
   background: var(--color-surface);
   color: var(--color-text);
@@ -393,6 +394,11 @@ section {
 html:has(.exp-modal[open]) {
   overflow: hidden;
   scrollbar-gutter: stable;
+}
+
+/* touch browsers resize the viewport when overflow flips (URL bar), which jostles fixed UI; the dialog's overscroll-behavior already contains scrolling */
+@media (pointer: coarse) {
+  html:has(.exp-modal[open]) { overflow: visible; scrollbar-gutter: auto; }
 }
 
 .exp-modal {
