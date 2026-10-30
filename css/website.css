@@ -996,8 +996,8 @@ footer p {
   html, body { overflow-x: clip; overscroll-behavior: none; }
 }
 @media (pointer: coarse) {
-  .hunt { transition: opacity .25s; }
-  .hunt.scrolling { opacity: 0; pointer-events: none; }
+  .hunt { transition: opacity .4s .45s; }
+  .hunt.scrolling { opacity: 0; pointer-events: none; transition-duration: .2s; transition-delay: 0s; }
 }.hunt .slot::after { content: attr(data-hint); position: absolute; right: 0; bottom: calc(100% + 12px); width: max-content; max-width: 210px; padding: 6px 12px; border-radius: 12px; background: var(--color-surface-alt); color: var(--color-text); border: 1px solid var(--color-border); font: 500 .78rem/1.35 var(--font-sans); text-align: left; opacity: 0; transform: translateY(4px); pointer-events: none; transition: opacity .2s, transform .2s; }
 .hunt .slot.on::after { content: none; }
 .hunt .slot:hover::after, .hunt .slot:focus-visible::after { opacity: 1; transform: none; }
