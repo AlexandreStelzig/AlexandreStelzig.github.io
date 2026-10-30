@@ -7,7 +7,7 @@
   function svg(inner) { return '<svg viewBox="0 0 32 32" aria-hidden="true">' + inner + '</svg>'; }
   var ART = {
     moon: svg('<path d="M21 4a12 12 0 1 0 7 21A10 10 0 0 1 21 4z" fill="#f1d58a"' + S + '/><circle cx="26" cy="7" r="1.4" fill="#f1d58a"/>'),
-    dog: svg('<path class="tail" d="M7 21C3 20 2 15 4 12" fill="none"' + S + '/><ellipse cx="15" cy="22" rx="11" ry="6.5" fill="#f3e1c8"' + S + '/><circle cx="24" cy="19" r="5.5" fill="#f3e1c8"' + S + '/><path d="M20.5 15.5c-2-1-3.500 1-3 4 2-.5 3.200-2 3-4z" fill="#d9a066"' + S + '/><path class="eye-z" d="M23 19.500q1.500 1.200 3 0" fill="none"' + S + '/><circle class="eye-o" cx="25" cy="18.500" r="1.300" fill="' + INK + '"/><circle cx="28.500" cy="20.500" r="1.100" fill="' + INK + '"/>'),
+    dog: svg('<g class="legs" fill="none"' + S + '><path d="M8 23v6M12.500 24v5M19 24v5M23 23v6"/></g><g class="dog-body"><path class="tail" d="M7 21C3 20 2 15 4 12" fill="none"' + S + '/><ellipse cx="15" cy="22" rx="11" ry="6.5" fill="#f3e1c8"' + S + '/><circle cx="24" cy="19" r="5.5" fill="#f3e1c8"' + S + '/><path d="M20.5 15.5c-2-1-3.500 1-3 4 2-.5 3.200-2 3-4z" fill="#d9a066"' + S + '/><path class="eye-z" d="M23 19.500q1.500 1.200 3 0" fill="none"' + S + '/><circle class="eye-o" cx="25" cy="18.500" r="1.300" fill="' + INK + '"/><circle cx="28.500" cy="20.500" r="1.100" fill="' + INK + '"/></g>'),
     paw: svg('<ellipse cx="16" cy="21" rx="6" ry="5" fill="#d98a6c"/><circle cx="8" cy="14" r="2.600" fill="#d98a6c"/><circle cx="13" cy="9" r="2.600" fill="#d98a6c"/><circle cx="19" cy="9" r="2.600" fill="#d98a6c"/><circle cx="24" cy="14" r="2.600" fill="#d98a6c"/>'),
     mug: svg('<path d="M6 12h16v9a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z" fill="#d98a6c"' + S + '/><path d="M22 14h2a3.5 3.5 0 0 1 0 7h-2" fill="none"' + S + '/><path d="M11 8c0-2 2-2 2-4M17 8c0-2 2-2 2-4" fill="none"' + S + '/>'),
     acorn: svg('<path d="M7 14h18c0 8-4 14-9 14s-9-6-9-14z" fill="#d9a066"' + S + '/><path d="M6 14c0-5 4-8 10-8s10 3 10 8z" fill="#8a5a3c"' + S + '/><path d="M16 6V3" fill="none"' + S + '/>'),
@@ -136,7 +136,7 @@
   var ITEMS = [
     { k: 'avatar', art: 'mug', name: 'A warm hello', hint: 'Say hello to me. Click my photo a few times.' },
     { k: 'brand', art: 'acorn', name: 'Acorn', hint: 'An acorn is tucked into the corner of a project card. Plant it.' },
-    { k: 'xylo', art: 'xylo', name: 'Xylophone', hint: 'Some letters in the big headline sing when you click them. Play a few.' },
+    { k: 'xylo', art: 'xylo', name: 'Xylophone', hint: 'Keep clicking the big headline letters. About 5 clicks and they sing.' },
     { k: 'moon', art: 'moon', name: 'Sleepy moon', hint: 'Someone is resting on the BetterSleep card.' },
     { k: 'dog', art: 'dog', name: 'Sleepy pup', hint: 'Someone is napping at the very bottom of the page. Wake them up.' }
   ];
@@ -167,6 +167,8 @@
       document.documentElement.classList.toggle('has-' + it.k, !!found[it.k]);
     });
     shelf.classList.toggle('complete', count() === ITEMS.length);
+    var hf = $('#hunt-found'); if (hf) hf.textContent = count();
+    var hh = $('#hero-hunt'); if (hh) hh.classList.toggle('done', count() === ITEMS.length);
     document.documentElement.style.setProperty('--found', count());
     paintUnlocked();
   }
@@ -274,6 +276,8 @@
     var rb = e.target.closest('.hint-reset'); if (rb) confirmReset(rb, openHints);
   });
   shelf.addEventListener('click', openHints);
+  var heroHunt = $('#hero-hunt');
+  if (heroHunt) { heroHunt.addEventListener('click', openHints); heroHunt.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openHints(); } }); }
 
   /* avatar */
   var av = $('#avatar'), avClicks = 0;
@@ -343,12 +347,15 @@
       });
     };
     walk(h1);
-    var plays = 0, tip = document.createElement('div');
+    var NEED = 5, plays = 0, tip = document.createElement('div');
     tip.className = 'xylo-tip'; tip.setAttribute('aria-hidden', 'true'); tip.innerHTML = '<span>♪ try clicking the letters</span><svg viewBox="0 0 60 44" width="60" height="44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M52 3C50 22 34 34 9 36"/><path d="M18 28L8 36l11 6"/></svg>';
     if (!found.xylo) { h1.parentNode.classList.add('has-tip'); h1.parentNode.appendChild(tip); }
     h1.addEventListener('click', function (e) {
       var ch = e.target.closest('.ch'); if (!ch) return;
-      tip.classList.add('gone');
+      var label = tip.querySelector('span');
+      if (plays + 1 >= NEED) tip.classList.add('gone');
+      else label.textContent = '♪ ' + (NEED - plays - 1) + ' more click' + (NEED - plays - 1 === 1 ? '' : 's') + '…'
+        label.classList.remove('tick'); void label.offsetWidth; label.classList.add('tick');
       var code = ch.textContent.toLowerCase().charCodeAt(0);
       bar(SCALE[code % SCALE.length]);
       ch.classList.remove('ring'); void ch.offsetWidth; ch.classList.add('ring');
@@ -359,7 +366,7 @@
           n.style.setProperty('--wd', d * 70 + 'ms'); n.classList.remove('wave'); void n.offsetWidth; n.classList.add('wave');
         });
       }
-      if (++plays === 8) find('xylo', null, e.clientX, e.clientY, ['note', 'note']);
+      if (++plays === NEED) find('xylo', null, e.clientX, e.clientY, ['note', 'note']);
     });
   }
 
