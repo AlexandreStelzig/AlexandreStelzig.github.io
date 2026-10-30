@@ -229,9 +229,10 @@
     rw.innerHTML = '<button class="exp-modal-close" aria-label="Close">&times;</button>' +
       '<div class="reward-art">' + ITEMS.map(function (it) { return '<span>' + ART[it.art] + '</span>'; }).join('') + '</div>' +
       '<h3 class="hint-title">You found everything</h3>' +
-      '<p class="reward-text">Thanks for poking around. I like sweating the small details, and I would love to bring that care to your next mobile app. If you are hiring, or just want to talk apps, say hello.</p>' +
+      '<p class="reward-text">Thanks for poking around. I like sweating the small details, and I would love to bring that care to your next project. If you are hiring, or just want to talk shop, say hello.</p>' +
+      '<a class="reward-go" href="#projects" data-go>Continue exploring</a>' +
       '<div class="reward-links">' +
-        '<a class="primary" href="mailto:alexandre.stelzig@gmail.com">Email me</a>' +
+        '<a href="mailto:alexandre.stelzig@gmail.com">Email me</a>' +
         '<a href="projects/AlexandreStelzigResume.pdf" target="_blank" rel="noopener">Resume</a>' +
         '<a href="https://www.linkedin.com/in/alexstelzig/" target="_blank" rel="noopener">LinkedIn</a>' +
         '<a href="https://github.com/AlexandreStelzig" target="_blank" rel="noopener">GitHub</a>' +
@@ -241,6 +242,7 @@
   }
   rw.addEventListener('click', function (e) {
     if (e.target === rw || e.target.classList.contains('exp-modal-close')) { rw.close(); return; }
+    if (e.target.closest('[data-go]')) rw.close();
     var rb = e.target.closest('.hint-reset'); if (rb) confirmReset(rb, function () { rw.close(); openHints(); });
   });
   function confirmReset(btn, done) {
