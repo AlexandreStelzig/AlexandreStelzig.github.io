@@ -21,15 +21,15 @@
       },
       screens: {
         welcome: { id: 'welcome', version: 1, config: col('#fffaf0', [
-          text('Welcome to Lumen', 28, 700, '#2e2620'),
-          text('A calmer way to wind down your day.', 16, 400, '#7a6c5d'),
+          text('Welcome to SwiftPath', 28, 700, '#2e2620'),
+          text('Onboarding that updates without an app release.', 16, 400, '#7a6c5d'),
           spacer(1),
           button('cta', 'Get started', '#b4572f')
         ]) },
         goal: { id: 'goal', version: 1, config: col('#fffaf0', [
-          text('What brings you here?', 26, 700, '#2e2620'),
-          option('opt_sleep', 'Better sleep', 'goal', 'sleep'),
-          option('opt_focus', 'More focus', 'goal', 'focus')
+          text('What is your onboarding for?', 26, 700, '#2e2620'),
+          option('opt_sleep', 'Collect user info', 'goal', 'info'),
+          option('opt_focus', 'Show off features', 'goal', 'features')
         ]) },
         name: { id: 'name', version: 1, config: col('#fffaf0', [
           text('What should we call you?', 26, 700, '#2e2620'),
@@ -60,16 +60,16 @@
   v2.flow.screens.splice(2, 0, { node_id: 'n_tips', screen_id: 'tips', action_mapping: [
     { source_component_id: 'cta', default_config: { action: 'navigation', target_node_id: 'n3' } } ] });
   v2.screens.welcome = { id: 'welcome', version: 2, config: col('#2e2620', [
-    text('Wind down with Lumen', 30, 700, '#fffaf0'),
-    text('Five minutes a night. Sleep better tomorrow.', 16, 400, '#e3d6c1'),
+    text('Ship onboarding faster with SwiftPath', 30, 700, '#fffaf0'),
+    text('Change screens, copy and routes from the web builder.', 16, 400, '#e3d6c1'),
     spacer(1),
-    button('cta', 'Start tonight', '#e0a15f', '#2e2620')
+    button('cta', 'Get started', '#e0a15f', '#2e2620')
   ]) };
   v2.screens.goal.version = 2;
-  v2.screens.goal.config.children.push(option('opt_stress', 'Less stress', 'goal', 'stress'));
+  v2.screens.goal.config.children.push(option('opt_stress', 'Drive sign-ups', 'goal', 'signups'));
   v2.screens.tips = { id: 'tips', version: 2, config: col('#fffaf0', [
-    text('A tip for better sleep', 26, 700, '#2e2620'),
-    text('Dim the lights an hour before bed. We’ll remind you.', 16, 400, '#7a6c5d'),
+    text('Tip: iterate without a release', 26, 700, '#2e2620'),
+    text('Publish a change and every user sees it on their next launch.', 16, 400, '#7a6c5d'),
     spacer(1),
     button('cta', 'Nice, continue', '#b4572f')
   ]) };

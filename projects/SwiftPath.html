@@ -79,10 +79,27 @@
           <div id="sdui-error"></div>
         </div>
       </div>
+
+      <h2 style="margin: 48px 0 8px;">The web builder</h2>
+      <p class="project-description" style="margin-bottom: 20px;">
+        Screens and flows are authored in a Next.js web builder. The preview is the same Kotlin Multiplatform renderer compiled to Wasm, so what you design is exactly what ships. Publishing writes the JSON to Firebase.
+      </p>
+      <div class="gallery-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+        <img src="../img/swiftpath/builder-screen.jpg" alt="Screen builder with layer tree, live preview and property panel">
+        <img src="../img/swiftpath/builder-flow.jpg" alt="Flow builder connecting screens with routes">
+      </div>
     </div>
   </div>
 
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+    <img src="" alt="">
+    <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  </div>
+
   <footer><p>&copy; Alexandre Stelzig 2026</p></footer>
+  <script src="../js/lightbox.js"></script>
   <script src="../js/swiftpath-demo.js"></script>
 </body>
 </html>
