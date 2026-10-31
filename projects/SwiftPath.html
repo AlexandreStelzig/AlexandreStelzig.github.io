@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwiftPath — Alexandre Stelzig</title>
+  <link rel="icon" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/website.css">
+  <style>
+    .sdui-demo { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: start; margin-top: 8px; }
+    .sdui-phone { width: 320px; height: 600px; border: 10px solid var(--color-text); border-radius: 38px; overflow: hidden; background: var(--color-surface); position: relative; }
+    #sdui-screen { height: 100%; overflow-y: auto; font-family: var(--font-sans); }
+    #sdui-screen > div { min-height: 100%; box-sizing: border-box; }
+    #sdui-screen input { font: inherit; padding: 12px 14px; border: 1px solid var(--color-border); border-radius: 12px; background: #fff; color: var(--color-text); }
+    .sdui-click { cursor: pointer; transition: transform .15s ease; }
+    .sdui-click:active { transform: scale(.97); }
+    .sdui-selected { outline: 2px solid var(--color-accent); }
+    .sdui-loading { height: 100%; display: flex; align-items: center; justify-content: center; }
+    .sdui-spinner { width: 28px; height: 28px; border: 3px solid var(--color-border); border-top-color: var(--color-accent); border-radius: 50%; animation: sdui-spin .8s linear infinite; }
+    @keyframes sdui-spin { to { transform: rotate(360deg); } }
+    .sdui-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+    .sdui-controls button { font: inherit; font-size: 14px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; }
+    .sdui-controls button.active { background: var(--color-accent); border-color: var(--color-accent); color: #fffaf0; }
+    .sdui-controls button:disabled { opacity: .4; cursor: default; }
+    #sdui-status { font-size: 13px; color: var(--color-text-muted); margin-bottom: 8px; }
+    #sdui-editor { width: 100%; height: 430px; box-sizing: border-box; font: 12.5px/1.5 ui-monospace, Menlo, Consolas, monospace; padding: 14px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface); color: var(--color-text); resize: vertical; }
+    #sdui-error { color: #b3261e; font-size: 13px; min-height: 18px; margin-top: 6px; }
+    @media (max-width: 760px) { .sdui-demo { grid-template-columns: 1fr; } .sdui-phone { margin: 0 auto; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-back" href="../index.html" onclick="if (history.length > 1) { event.preventDefault(); history.back(); }" aria-label="Back to all projects"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a>
+      <a class="nav-brand" href="../index.html">Alexandre Stelzig</a>
+    </div>
+  </nav>
+
+  <div class="project-detail">
+    <div class="project-detail-inner">
+      <header class="project-top">
+        <div>
+          <div class="project-kicker">Side project · Mobile &amp; Web</div>
+          <h1>SwiftPath</h1>
+          <p class="project-description">
+            A server-driven onboarding runtime. Screens, flows, variables and conditions are described as JSON, authored in a web builder and stored in the cloud. A Kotlin Multiplatform app renders them natively on Android and iOS, and in the browser through Wasm.
+            <br><br>
+            The JSON lives on Firebase. When the app starts, it sends its project ID and flow ID to a Cloud Function, which reads the flow, its screens, variables and branding from the Realtime Database and returns them in a single response. Because the UI is data, copy, layout and routing can change without shipping an app update. Try it below.
+          </p>
+          <div class="project-tags"><span>KMP</span><span>Compose</span><span>Next.js</span><span>Firebase</span></div>
+        </div>
+        <img class="project-top-img icon" src="../img/swiftpath/icon.svg" alt="SwiftPath">
+      </header>
+
+      <h2 style="margin-bottom: 8px;">Proof of concept</h2>
+      <p class="project-description" style="margin-bottom: 20px;">
+        This phone is a small renderer that only knows component types (<code>column</code>, <code>text</code>, <code>edit_text</code>…). Everything on screen comes from JSON in SwiftPath's real wire format. Switch the "server" from v1 to v2 to see a new design, an extra option and a new step appear with no client change, or edit the JSON yourself.
+      </p>
+
+      <div class="sdui-demo">
+        <div class="sdui-phone"><div id="sdui-screen"></div></div>
+        <div>
+          <div class="sdui-controls">
+            <span style="font-size:14px;color:var(--color-text-muted)">Server version:</span>
+            <button data-version="v1">v1</button>
+            <button data-version="v2">v2 (published later)</button>
+            <button id="sdui-back" disabled>Back</button>
+            <button id="sdui-restart">Restart</button>
+          </div>
+          <div id="sdui-status"></div>
+          <div class="sdui-controls">
+            <button data-mode="screen" class="active">Screen JSON</button>
+            <button data-mode="flow">Flow JSON</button>
+          </div>
+          <textarea id="sdui-editor" spellcheck="false" aria-label="Screen JSON"></textarea>
+          <div id="sdui-error"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>&copy; Alexandre Stelzig 2026</p></footer>
+  <script src="../js/swiftpath-demo.js"></script>
+</body>
+</html>
