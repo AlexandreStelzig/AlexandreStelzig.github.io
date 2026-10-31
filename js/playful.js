@@ -245,7 +245,6 @@
       '<a class="reward-go" href="#projects" data-go>Continue exploring</a>' +
       '<div class="reward-links">' +
         '<a href="mailto:alexandre.stelzig@gmail.com">Email me</a>' +
-        '<a href="projects/AlexandreStelzigResume.pdf" target="_blank" rel="noopener">Resume</a>' +
         '<a href="https://www.linkedin.com/in/alexstelzig/" target="_blank" rel="noopener">LinkedIn</a>' +
         '<a href="https://github.com/AlexandreStelzig" target="_blank" rel="noopener">GitHub</a>' +
       '</div>' +
@@ -253,7 +252,7 @@
     if (!rw.open) rw.showModal();
   }
   rw.addEventListener('click', function (e) {
-    if (e.target === rw || e.target.classList.contains('exp-modal-close')) { rw.close(); return; }
+    if (e.target.classList.contains('exp-modal-close')) { rw.close(); return; }
     if (e.target.closest('[data-go]')) rw.close();
     var rb = e.target.closest('.hint-reset'); if (rb) confirmReset(rb, function () { rw.close(); openHints(); });
   });
