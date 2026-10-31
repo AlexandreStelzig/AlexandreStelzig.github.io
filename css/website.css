@@ -1149,3 +1149,7 @@ footer { position: relative; }
   #dog { will-change: transform; contain: layout; }
   #dog::after { will-change: transform, opacity; }
 }
+
+.btn-store .fa {
+  margin-right: 4px;
+}
