@@ -241,7 +241,7 @@
     rw.innerHTML = '<button class="exp-modal-close" aria-label="Close">&times;</button>' +
       '<div class="reward-art">' + ITEMS.map(function (it) { return '<span>' + ART[it.art] + '</span>'; }).join('') + '</div>' +
       '<h3 class="hint-title">You found everything</h3>' +
-      '<p class="reward-text">Thanks for poking around. I like sweating the small details, and I would love to bring that care to your next project. If you are hiring, or just want to talk shop, say hello.</p>' +
+      '<p class="reward-text">Thanks for poking around. I like sweating the small details, and I would love to bring that care to your next project. If you are hiring, or just want to chat, say hello.</p>' +
       '<a class="reward-go" href="#projects" data-go>Continue exploring</a>' +
       '<div class="reward-links">' +
         '<a href="mailto:alexandre.stelzig@gmail.com">Email me</a>' +
